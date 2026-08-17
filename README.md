@@ -31,10 +31,10 @@ https://developer.wordpress.org/reference/functions/wp_enqueue_script/
 https://developer.wordpress.org/reference/functions/wp_enqueue_scripts/
 
 dynamic css and js links - functions.php -
-wp_enqueue_style(), wp_enqueue_script(),  wp_head(), wp_footer()
+	wp_enqueue_style(), wp_enqueue_script(),  wp_head(), wp_footer()
 
-header, footer - header.php, footer.php - 
-get_header(), get_footer()
+header, footer - 
+	header.php, footer.php - get_header(), get_footer()
 
 JQuery - to connect wp jquery - wp_enqueue_script('jquery');
 
