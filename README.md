@@ -1,10 +1,22 @@
 # wpt-blog
 
 Step 1: Template install
-style.css - add style.css to root wp theme folder
+Installing wp, creating theme folder in wp-content/themes/, 
+creating file index.php and style.css, screenshot.png in root theme folder
+
+Core concept
+https://developer.wordpress.org/themes/core-concepts/theme-structure/
+
+style.css
 	style.css to wordpress 
 	https://developer.wordpress.org/themes/core-concepts/main-stylesheet/
 	https://developer.wordpress.org/themes/classic-themes/basics/main-stylesheet-style-css/
 
-index.php
+screenshot.png - 1200*900 px
+
+index.php 
+
+Template checking - html, css, js, organize template, 
+Wp settings - permalink - post name
+
 
