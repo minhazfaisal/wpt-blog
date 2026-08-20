@@ -26,7 +26,7 @@
           <div class="blog_left_sidebar">
             <article class="blog_item">
               <div class="blog_item_img">
-                <img class="card-img rounded-0" src="img/blog/main-blog/m-blog-1.jpg" alt="">
+                <img class="card-img rounded-0" src="<?php echo get_template_directory_uri(); ?>/img/blog/main-blog/m-blog-1.jpg" alt="">
                 <a href="#" class="blog_item_date">
                   <h3>15</h3>
                   <p>Jan</p>
@@ -45,7 +45,7 @@
             </article>
             <article class="blog_item">
               <div class="blog_item_img">
-                <img class="card-img rounded-0" src="img/blog/main-blog/m-blog-2.jpg" alt="">
+                <img class="card-img rounded-0" src="<?php echo get_template_directory_uri(); ?>/img/blog/main-blog/m-blog-2.jpg" alt="">
                 <a href="#" class="blog_item_date">
                   <h3>15</h3>
                   <p>Jan</p>
@@ -64,7 +64,7 @@
             </article>
             <article class="blog_item">
               <div class="blog_item_img">
-                <img class="card-img rounded-0" src="img/blog/main-blog/m-blog-3.jpg" alt="">
+                <img class="card-img rounded-0" src="<?php echo get_template_directory_uri(); ?>/img/blog/main-blog/m-blog-3.jpg" alt="">
                 <a href="#" class="blog_item_date">
                   <h3>15</h3>
                   <p>Jan</p>
@@ -83,7 +83,7 @@
             </article>
             <article class="blog_item">
               <div class="blog_item_img">
-                <img class="card-img rounded-0" src="img/blog/main-blog/m-blog-4.jpg" alt="">
+                <img class="card-img rounded-0" src="<?php echo get_template_directory_uri(); ?>/img/blog/main-blog/m-blog-4.jpg" alt="">
                 <a href="#" class="blog_item_date">
                   <h3>15</h3>
                   <p>Jan</p>
@@ -102,7 +102,7 @@
             </article>
             <article class="blog_item">
               <div class="blog_item_img">
-                <img class="card-img rounded-0" src="img/blog/main-blog/m-blog-5.jpg" alt="">
+                <img class="card-img rounded-0" src="<?php echo get_template_directory_uri(); ?>/img/blog/main-blog/m-blog-5.jpg" alt="">
                 <a href="#" class="blog_item_date">
                   <h3>15</h3>
                   <p>Jan</p>
@@ -204,7 +204,7 @@
             <aside class="single_sidebar_widget popular_post_widget">
               <h3 class="widget_title">Recent Post</h3>
               <div class="media post_item">
-                <img src="img/blog/popular-post/post1.jpg" alt="post">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/blog/popular-post/post1.jpg" alt="post">
                 <div class="media-body">
                   <a href="single-blog.html">
                     <h3>From life was you fish...</h3>
@@ -213,7 +213,7 @@
                 </div>
               </div>
               <div class="media post_item">
-                <img src="img/blog/popular-post/post2.jpg" alt="post">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/blog/popular-post/post2.jpg" alt="post">
                 <div class="media-body">
                   <a href="single-blog.html">
                     <h3>The Amazing Hubble</h3>
@@ -222,7 +222,7 @@
                 </div>
               </div>
               <div class="media post_item">
-                <img src="img/blog/popular-post/post3.jpg" alt="post">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/blog/popular-post/post3.jpg" alt="post">
                 <div class="media-body">
                   <a href="single-blog.html">
                     <h3>Astronomy Or Astrology</h3>
@@ -231,7 +231,7 @@
                 </div>
               </div>
               <div class="media post_item">
-                <img src="img/blog/popular-post/post4.jpg" alt="post">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/blog/popular-post/post4.jpg" alt="post">
                 <div class="media-body">
                   <a href="single-blog.html">
                     <h3>Asteroids telescope</h3>
@@ -274,32 +274,32 @@
               <ul class="instagram_row flex-wrap">
                 <li>
                   <a href="#">
-                    <img class="img-fluid" src="img/instagram/widget-i1.png" alt="">
+                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/instagram/widget-i1.png" alt="">
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img class="img-fluid" src="img/instagram/widget-i2.png" alt="">
+                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/instagram/widget-i2.png" alt="">
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img class="img-fluid" src="img/instagram/widget-i3.png" alt="">
+                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/instagram/widget-i3.png" alt="">
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img class="img-fluid" src="img/instagram/widget-i4.png" alt="">
+                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/instagram/widget-i4.png" alt="">
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img class="img-fluid" src="img/instagram/widget-i5.png" alt="">
+                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/instagram/widget-i5.png" alt="">
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img class="img-fluid" src="img/instagram/widget-i6.png" alt="">
+                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/instagram/widget-i6.png" alt="">
                   </a>
                 </li>
               </ul>
