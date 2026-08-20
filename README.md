@@ -22,6 +22,10 @@ Wp settings - permalink - post name
 
 Step 2: css and js links, blog page, index page, copy the template
 
+Connect the image - before creating header and footer.php
+https://developer.wordpress.org/reference/functions/get_template_directory_uri/
+<img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="" />
+
 Copy the template to theme folder, copy blog.html to index.php, connecting functions.php, header.php, footer.php
 
 Add css and js
