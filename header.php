@@ -4,7 +4,7 @@
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link rel="icon" href="img/favicon.html" type="image/png" />
+  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.html" type="image/png" />
   <title>Eiser ecommerce</title>
   <!-- links calling -->
   <?php wp_head(); ?>
@@ -50,7 +50,7 @@
         <nav class="navbar navbar-expand-lg navbar-light w-100">
 
           <a class="navbar-brand logo_h" href="index.html">
-            <img src="img/logo.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="" />
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="icon-bar"></span>
