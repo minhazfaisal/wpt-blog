@@ -5,7 +5,7 @@ Installing wp, creating theme folder in wp-content/themes/,
 creating file index.php and style.css, screenshot.png in root theme folder
 
 Core concept
-https://developer.wordpress.org/themes/core-concepts/theme-structure/
+	https://developer.wordpress.org/themes/core-concepts/theme-structure/
 
 Style.css to wordpress
 	https://developer.wordpress.org/themes/core-concepts/main-stylesheet/
@@ -61,21 +61,21 @@ Css links = 13 including theme css (total 12 files in all css links maybe)
   <link rel="stylesheet" href="css/responsive.css" />
 
 Scripts 15
-  <script src="js/jquery-3.2.1.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/stellar.js"></script>
-  <script src="vendors/lightbox/simpleLightbox.min.js"></script>
-  <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-  <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-  <script src="vendors/isotope/isotope-min.js"></script>
-  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-  <script src="vendors/jquery-ui/jquery-ui.js"></script>
-  <script src="js/jquery.ajaxchimp.min.js"></script>
-  <script src="js/mail-script.js"></script>
-  <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
-  <script src="vendors/counter-up/jquery.counterup.js"></script>
-  <script src="js/theme.js"></script>
+	<script src="js/jquery-3.2.1.min.js"></script>
+  	<script src="js/popper.js"></script>
+  	<script src="js/bootstrap.min.js"></script>
+  	<script src="js/stellar.js"></script>
+  	<script src="vendors/lightbox/simpleLightbox.min.js"></script>
+  	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+  	<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+  	<script src="vendors/isotope/isotope-min.js"></script>
+  	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+  	<script src="vendors/jquery-ui/jquery-ui.js"></script>
+  	<script src="js/jquery.ajaxchimp.min.js"></script>
+  	<script src="js/mail-script.js"></script>
+  	<script src="vendors/counter-up/jquery.waypoints.min.js"></script>
+  	<script src="vendors/counter-up/jquery.counterup.js"></script>
+  	<script src="js/theme.js"></script>
 
 body_class()
 <body class="<?php body_class(); ?>">
