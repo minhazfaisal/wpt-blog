@@ -80,6 +80,25 @@ Scripts 15
 body_class()
 <body class="<?php body_class(); ?>">
 
+Step 3: inc folder in theme root
+To maintain functions.php easily create a inc folder -> enqueqe.php file 
+Put all the css js in it, connect file to functions.php using require()
 
+require / require_once: If the target file is missing, PHP triggers a fatal error and immediately stops running the script.
+include / include_once: If the target file is missing, PHP triggers a warning but continues running the script anyway 
+
+https://wordpress.stackexchange.com/questions/206703/the-proper-way-to-include-require-php-files-in-wordpress
+
+get_template_directory()
+Returns a server file path (e.g., /home/user/public_html/wp-content/themes/my-theme). 
+Used for backend PHP operations like loading or reading local files. 
+Ideal with include, require, or require_once.
+
+get_template_directory_uri()
+Returns a web address URL (e.g., https://example.com).
+Used for frontend HTML assets that the browser needs to download.
+Ideal for linking stylesheets, JavaScript files, and images via functions like wp_enqueue_script
+
+https://wordpress.stackexchange.com/questions/208629/difference-and-usage-of-uri-e-g-get-directory-uri-and-absolute-path-e-g-get
 
 
