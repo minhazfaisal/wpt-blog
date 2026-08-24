@@ -124,7 +124,7 @@ wp_nav_menu() to display your custom menu.
 https://developer.wordpress.org/reference/functions/wp_nav_menu/
 https://codex.wordpress.org/Navigation_Menus
 
-numbered placeholders – %1$s, %2$s, %3$s
+numbered placeholders – %1$s, %2$s, %3$s -
 https://wordpress.stackexchange.com/questions/19245/any-docs-for-wp-nav-menus-items-wrap-argument
 
 <?php 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>' ?> - wp default
@@ -134,8 +134,8 @@ In wp_nav_menu(), item_wrap defines the HTML wrapper around the menu items:
 
 %3$s is replaced by the generated menu items, usually the <li> elements.
 <ul class="right_side">
-  <li><a href="...">Home</a></li>
-  <li><a href="...">Contact</a></li>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Contact</a></li>
 </ul>
 
 The placeholders are:
