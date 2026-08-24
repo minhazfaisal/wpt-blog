@@ -103,8 +103,10 @@ Ideal for linking stylesheets, JavaScript files, and images via functions like w
 https://wordpress.stackexchange.com/questions/208629/difference-and-usage-of-uri-e-g-get-directory-uri-and-absolute-path-e-g-get
 
 **Step 4: menubar**
-Inc folder -> menu.php -> calling to functions.php, 
-register_nav_menus(), creating menu from Appearance, calling to header.php using wp_nav_menu() 
+inc folder -> menu.php -> calling to functions.php, 
+register_nav_menus(), creating menu from Appearance, calling to header.php using wp_nav_menu(), 
+some times style.css is used to customize menu style
+ 
 
 Create a custom menu in wordpress
 https://www.wpbeginner.com/wp-themes/how-to-add-custom-navigation-menus-in-wordpress-3-0-themes/
