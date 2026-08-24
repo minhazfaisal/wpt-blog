@@ -1,6 +1,7 @@
 # wpt-blog
 
 **Step 1: Template install**
+
 Installing wp, creating theme folder in wp-content/themes/, 
 creating file index.php and style.css, screenshot.png in root theme folder
 
