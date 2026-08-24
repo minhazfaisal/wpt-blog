@@ -21,8 +21,15 @@
               <p>email: <a href="https://preview.colorlib.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d2bbbcb4bd92b7bba1b7a0fcb1bdbf">[email&#160;protected]</a></p>
             </div>
           </div>
+          <!-- 
+          *** header top menu with 2 examples, 
+          *** ex1 container_class and items_wrap included, 
+          *** ex2 only container_class and menu_class included 
+          -->
+          <!-- *** ex 1  col-lg-5 start -->
           <div class="col-lg-5">
-            <div class="float-right">
+            <!-- header top menu -->
+            <!-- <div class="float-right">
               <ul class="right_side">
                 <li>
                   <a href="cart.html">
@@ -40,12 +47,106 @@
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> -->
+            <?php
+              wp_nav_menu(array(
+                'theme_location' => 'top',
+                'container_class' => 'float-right',
+                'items_wrap' => '<ul class="right_side">%3$s</ul>',
+              ));
+            ?>
           </div>
+          <!-- ex 1  col-lg-5 end -->
+          <!-- *** ex 2 col-lg-5 start -->
+          <!-- <div class="col-lg-5"> -->
+            <!-- header top menu -->
+            <!-- <div class="float-right">
+              <ul class="right_side">
+                <li>
+                  <a href="cart.html">
+                    gift card
+                  </a>
+                </li>
+                <li>
+                  <a href="tracking.html">
+                    track order
+                  </a>
+                </li>
+                <li>
+                  <a href="contact.html">
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div> -->
+              <?php
+                // wp_nav_menu(array(
+                //   'theme_location' => 'top',
+                //   'container_class' => 'float-right',
+                //   // 'container' => 'div',
+                //   'menu_class' => 'right_side',
+                // ));
+              ?>
+          <!-- </div> -->
+          <!-- ex 2 col-lg-5 end -->
         </div>
       </div>
     </div>
+    <!-- main menu start -->
     <div class="main_menu">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light w-100">
+
+          <a class="navbar-brand logo_h" href="index.html">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="" />
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse offset w-100" id="navbarSupportedContent">
+            <div class="row w-100 mr-0">
+              
+              <div class="col-lg-12 pr-0">
+                <!-- main menu -->
+                <!-- <ul class="nav navbar-nav center_nav pull-right">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                </ul> -->
+                <?php
+                  wp_nav_menu(array(
+                    'theme_location' => 'main',
+                    'container'   => false,
+                    'items_wrap'  => '<ul class="nav navbar-nav pull-right">%3$s</ul>',
+                    'fallback_cb' => 'wp_page_menu',
+                    // 'depth'       => 5,
+                    'walker'      => new WPTB1_Walker_Nav_Menu(),
+
+                  ));
+                ?>
+                <!-- main menu -->
+              </div>
+              
+            </div>
+          </div>
+
+        </nav>
+      </div>
+    </div>
+    <!-- main menu end -->
+    <!-- <div class="main_menu">
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light w-100">
 
@@ -144,5 +245,6 @@
           </div>
         </nav>
       </div>
-    </div>
+    </div> -->
+    
   </header>
