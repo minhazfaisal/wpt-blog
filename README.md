@@ -145,7 +145,7 @@ The placeholders are:
 Why %3$s instead of writing the <li> elements?
 Because WordPress creates the <li> elements automatically based on the menu configured in the admin panel. %3$s is a placeholder where those items are inserted.
 
-walker'      => new WPTB1_Walker_Nav_Menu()
+'walker' => new WPTB1_Walker_Nav_Menu()
 
 The walker generates Bootstrap-style nav markup for header menu.
 
