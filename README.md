@@ -133,10 +133,10 @@ https://wordpress.stackexchange.com/questions/19245/any-docs-for-wp-nav-menus-it
 In wp_nav_menu(), item_wrap defines the HTML wrapper around the menu items:
 
 %3$s is replaced by the generated menu items, usually the <li> elements.
-`<ul class="right_side">
+<ul class="right_side">
   <li><a href="#">Home</a></li>
   <li><a href="#">Contact</a></li>
-</ul>`
+</ul>
 
 The placeholders are:
 %1$s: menu ID
