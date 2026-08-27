@@ -156,3 +156,105 @@ it tells WordPress: “this theme can have menus”, it enables menu support.
 then register_nav_menus() defines where those menus live
 https://developer.wordpress.org/reference/functions/add_theme_support/
 
+Step 5: blog post using loop
+Inside index.php - keeping one article (showing wordpress default blog post). Adding loop, if statement to show post. Showing Feature image, Date, Category, Number of comments, Pagination.
+Inside functions.php(inc/theme_support.php) - enabling feature image in editor by adding theme support
+Inside style.css - pagination css might be added. (inc/theme_enqueue.php need to update if needed)
+
+Showing default blog post
+have_posts() the_post()
+
+If(), endif; While(), endwhile;
+
+if ( have_posts() ) :
+while ( have_posts() ) : the_post();
+		//content
+endwhile;
+endif;
+
+Feature image - with img class
+the_post_thumbnail()
+the_post_thumbnail('large', array('class' => 'card-img rounded-0'))
+
+in functions.php (in inc folder/theme_support.php), must call into a function
+add_theme_support( 'post-thumbnails' ) 
+
+https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+https://developer.wordpress.org/reference/functions/the_post_thumbnail/
+https://developer.wordpress.org/reference/functions/add_theme_support/
+https://wordpress.stackexchange.com/questions/102158/add-class-name-to-post-thumbnail
+Date functions -  
+get_the_time(), the_time(), the_date(),
+get_the_time('Y'), get_the_time('m'), get_the_time('d'), get_day_link(), the_time()
+
+https://wordpress.org/documentation/article/customize-date-and-time-format/
+https://developer.wordpress.org/reference/functions/get_the_date/
+https://developer.wordpress.org/reference/functions/get_the_time/
+https://developer.wordpress.org/reference/hooks/get_the_time/
+https://developer.wordpress.org/reference/functions/get_day_link/
+https://developer.wordpress.org/reference/functions/the_time/
+
+
+the_permalink() for ( linking a post or image )
+<?php the_permalink(); ?>
+https://developer.wordpress.org/reference/functions/the_permalink/
+
+the_title() - (showing post title)
+<?php the_title( '<h3>', '</h3>' ); ?>
+https://developer.wordpress.org/reference/functions/the_title/
+
+the_excerpt() - (Displays the post excerpt.)
+<?php the_excerpt(); ?>
+https://developer.wordpress.org/reference/functions/the_excerpt/
+
+the_category() - (Displays category list for a post)
+<?php the_category( ', ' ); ?>
+https://developer.wordpress.org/reference/functions/the_category/
+
+comments_popup_link() - Displays the link to the comments for the current post ID
+<?php 
+comments_popup_link( 
+    'No Comments', // Text when there are 0 comments
+    '1 Comment',   // Text when there is 1 comment
+    '% Comments',  // Text when there are more than 1 (% is replaced by the number)
+    'comments-link', // CSS class for the link
+    'Comments Off' // Text when comments are closed
+); 
+?>
+https://developer.wordpress.org/reference/functions/comments_popup_link/
+
+comments_number() - number of comments
+<?php comments_number( '0', '1', '%' ); ?>
+https://developer.wordpress.org/reference/functions/comments_number/
+blog pagination - 
+the_posts_pagination()
+<?php the_posts_pagination( array(
+          'mid_size'  => 2,
+          'prev_text' => __( '<i class="ti-arrow-left"></i>', 'EWP Theme' ),
+          'next_text' => __( '<i class="ti-arrow-right"></i>', 'EWP Theme' )
+      )); 
+?>
+https://developer.wordpress.org/reference/functions/the_posts_pagination/
+https://www.wpeditorial.com/how-to-use-the-the_posts_pagination-function-in-wordpress/
+
+mid_size - বর্তমান পৃষ্ঠার উভয় পাশে কয়টি সংখ্যা, কিন্তু বর্তমান পৃষ্ঠা অন্তর্ভুক্ত নয়
+
+If necessary, we have to add css for pagination. 
+style.css - (root css)(written css might not work if wp_enqueue_style( 'theme_css', get_template_directory_uri() ); is used, instead use wp_enqueue_style( 'theme_css', get_stylesheet_uri() );) 
+
+.pagination .nav-links .page-numbers {
+    padding: 10px 20px !important;
+    background: #fffefe !important;
+    border: 1px solid #eee !important;
+    color: #7d6f6f !important;
+}
+.pagination .nav-links .page-numbers:hover {
+    color: #fff !important;
+    background: #71CD14 !important;
+}
+.pagination .nav-links .current {
+    color: #fff !important;
+    background: #71CD14 !important;
+}
+
+Settings => reading => blog pages show at most ##  change the value
