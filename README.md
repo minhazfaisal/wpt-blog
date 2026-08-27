@@ -159,7 +159,8 @@ https://developer.wordpress.org/reference/functions/add_theme_support/
 Step 5: blog post using loop
 Inside index.php - keeping one article (showing wordpress default blog post). Adding loop, if statement to show post. Showing Feature image, Date, Category, Number of comments, Pagination.
 Inside functions.php(inc/theme_support.php) - enabling feature image in editor by adding theme support
-Inside style.css - pagination css might be added. (inc/theme_enqueue.php need to update if needed)
+Inside style.css - pagination css might be added. (inc/theme_enqueue.php need to update if needed, this page was named inc/enqueue.php)
+
 
 Showing default blog post
 have_posts() the_post()
