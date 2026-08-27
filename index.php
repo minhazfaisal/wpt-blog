@@ -86,7 +86,18 @@
             ?>
             <!-- blog item end -->
             <nav class="blog-pagination justify-content-center d-flex">
+              <!-- pagination -->
               <ul class="pagination">
+                <?php
+                  the_posts_pagination( array(
+                    'mid_size'  => 2,
+                    // 'end_size'  => 1,
+                    'prev_text' => __( '<span class="ti-arrow-left"></span>', 'wpt1' ),
+                    'next_text' => __( '<span class="ti-arrow-right"></span>', 'wpt1' ),
+                  ));
+                ?>
+              </ul>
+              <!-- <ul class="pagination">
                 <li class="page-item">
                   <a href="#" class="page-link" aria-label="Previous">
                     <span aria-hidden="true">
@@ -107,7 +118,7 @@
                     </span>
                   </a>
                 </li>
-              </ul>
+              </ul> -->
             </nav>
           </div>
         </div>
