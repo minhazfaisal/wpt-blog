@@ -35,21 +35,49 @@
                   <?php the_post_thumbnail('large', array('class' => 'card-img rounded-0')); ?>
                 </a>
                 <!-- <img class="card-img rounded-0" src="<?php echo get_template_directory_uri(); ?>/img/blog/main-blog/m-blog-1.jpg" alt=""> -->
-                
-                <a href="#" class="blog_item_date">
+                <!-- date -->
+                <?php 
+                  $a_y = get_the_time( 'Y' ); 
+                  $a_m = get_the_time( 'm' ); 
+                  $a_d = get_the_time( 'd' ); 
+                ?>
+                <a href="<?php echo esc_url( get_day_link( $a_y, $a_m, $a_d ) ); ?>" class="blog_item_date">
+                  <h3><?php echo get_the_time('d'); ?></h3>
+                  <p><?php echo get_the_time('M'); ?></p>
+                </a>
+                <!-- <a href="#" class="blog_item_date">
                   <h3>15</h3>
                   <p>Jan</p>
-                </a>
+                </a> -->
               </div>
               <div class="blog_details">
-                <a class="d-inline-block" href="single-blog.html">
-                  <h2>Google inks pact for new 35-storey office</h2>
+                <!-- blog title -->
+                <a class="d-inline-block" href="<?php the_permalink(); ?>">
+                  <?php the_title( '<h2>', '</h2>' ); ?>
                 </a>
-                <p>That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.</p>
+                <!-- <a class="d-inline-block" href="single-blog.html">
+                  <h2>Google inks pact for new 35-storey office</h2>
+                </a> -->
+                <!-- excerpt -->
+                <?php the_excerpt(); ?>
+                <!-- <p>That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.</p> -->
+                <!-- category, comments. -->
                 <ul class="blog-info-link">
+                  <li>
+                    <a href="#">
+                      <i class="ti-user"></i> <?php the_category( ', ' ); ?>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="ti-comments"></i> <?php comments_number( 'No Comments', '1 Comment', '% Comments' ); ?>
+                    </a>
+                  </li>
+                </ul>
+                <!-- <ul class="blog-info-link">
                   <li><a href="#"><i class="ti-user"></i> Travel, Lifestyle</a></li>
                   <li><a href="#"><i class="ti-comments"></i> 03 Comments</a></li>
-                </ul>
+                </ul> -->
               </div>
             </article>
             <?php 
