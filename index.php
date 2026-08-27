@@ -18,15 +18,24 @@
     </div>
   </section>
 
-
   <section class="blog_area section_gap">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mb-5 mb-lg-0">
           <div class="blog_left_sidebar">
+            <!-- blog item start -->
+            <?php
+            if ( have_posts() ) :
+              while ( have_posts() ) : the_post();
+            ?>
             <article class="blog_item">
               <div class="blog_item_img">
-                <img class="card-img rounded-0" src="<?php echo get_template_directory_uri(); ?>/img/blog/main-blog/m-blog-1.jpg" alt="">
+                <!-- featured image -->
+                <a href="<?php the_permalink(); ?>" alt="<?php the_title_attribute(); ?>">
+                  <?php the_post_thumbnail('large', array('class' => 'card-img rounded-0')); ?>
+                </a>
+                <!-- <img class="card-img rounded-0" src="<?php echo get_template_directory_uri(); ?>/img/blog/main-blog/m-blog-1.jpg" alt=""> -->
+                
                 <a href="#" class="blog_item_date">
                   <h3>15</h3>
                   <p>Jan</p>
@@ -43,82 +52,11 @@
                 </ul>
               </div>
             </article>
-            <article class="blog_item">
-              <div class="blog_item_img">
-                <img class="card-img rounded-0" src="<?php echo get_template_directory_uri(); ?>/img/blog/main-blog/m-blog-2.jpg" alt="">
-                <a href="#" class="blog_item_date">
-                  <h3>15</h3>
-                  <p>Jan</p>
-                </a>
-              </div>
-              <div class="blog_details">
-                <a class="d-inline-block" href="single-blog.html">
-                  <h2>Google inks pact for new 35-storey office</h2>
-                </a>
-                <p>That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.</p>
-                <ul class="blog-info-link">
-                  <li><a href="#"><i class="ti-user"></i> Travel, Lifestyle</a></li>
-                  <li><a href="#"><i class="ti-comments"></i> 03 Comments</a></li>
-                </ul>
-              </div>
-            </article>
-            <article class="blog_item">
-              <div class="blog_item_img">
-                <img class="card-img rounded-0" src="<?php echo get_template_directory_uri(); ?>/img/blog/main-blog/m-blog-3.jpg" alt="">
-                <a href="#" class="blog_item_date">
-                  <h3>15</h3>
-                  <p>Jan</p>
-                </a>
-              </div>
-              <div class="blog_details">
-                <a class="d-inline-block" href="single-blog.html">
-                  <h2>Google inks pact for new 35-storey office</h2>
-                </a>
-                <p>That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.</p>
-                <ul class="blog-info-link">
-                  <li><a href="#"><i class="ti-user"></i> Travel, Lifestyle</a></li>
-                  <li><a href="#"><i class="ti-comments"></i> 03 Comments</a></li>
-                </ul>
-              </div>
-            </article>
-            <article class="blog_item">
-              <div class="blog_item_img">
-                <img class="card-img rounded-0" src="<?php echo get_template_directory_uri(); ?>/img/blog/main-blog/m-blog-4.jpg" alt="">
-                <a href="#" class="blog_item_date">
-                  <h3>15</h3>
-                  <p>Jan</p>
-                </a>
-              </div>
-              <div class="blog_details">
-                <a class="d-inline-block" href="single-blog.html">
-                  <h2>Google inks pact for new 35-storey office</h2>
-                </a>
-                <p>That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.</p>
-                <ul class="blog-info-link">
-                  <li><a href="#"><i class="ti-user"></i> Travel, Lifestyle</a></li>
-                  <li><a href="#"><i class="ti-comments"></i> 03 Comments</a></li>
-                </ul>
-              </div>
-            </article>
-            <article class="blog_item">
-              <div class="blog_item_img">
-                <img class="card-img rounded-0" src="<?php echo get_template_directory_uri(); ?>/img/blog/main-blog/m-blog-5.jpg" alt="">
-                <a href="#" class="blog_item_date">
-                  <h3>15</h3>
-                  <p>Jan</p>
-                </a>
-              </div>
-              <div class="blog_details">
-                <a class="d-inline-block" href="single-blog.html">
-                  <h2>Google inks pact for new 35-storey office</h2>
-                </a>
-                <p>That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.</p>
-                <ul class="blog-info-link">
-                  <li><a href="#"><i class="ti-user"></i> Travel, Lifestyle</a></li>
-                  <li><a href="#"><i class="ti-comments"></i> 03 Comments</a></li>
-                </ul>
-              </div>
-            </article>
+            <?php 
+              endwhile;
+            endif;
+            ?>
+            <!-- blog item end -->
             <nav class="blog-pagination justify-content-center d-flex">
               <ul class="pagination">
                 <li class="page-item">
