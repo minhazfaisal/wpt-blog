@@ -13,3 +13,20 @@ License: commercial
 License URI: https://wpt.org/themes/wptb1/
 Text Domain: wpt1
 */
+/* pagination css - blogs*/
+.pagination .nav-links .page-numbers {
+    padding: 10px 20px !important;
+    background: #fffefe !important;
+    border: 1px solid #eee !important;
+    color: #7d6f6f !important;
+}
+
+.pagination .nav-links .page-numbers:hover {
+    color: #fff !important;
+    background: #71CD14 !important;
+}
+
+.pagination .nav-links .current {
+    color: #fff !important;
+    background: #71CD14 !important;
+}
