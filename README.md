@@ -259,3 +259,12 @@ style.css - (root css)(written css might not work if wp_enqueue_style( 'theme_cs
 }
 
 Settings => reading => blog pages show at most ##  change the value
+
+**Step 6: sidebar**
+Creating **sidebar.php**, calling into **index.php** 
+To call  get_sidebar()
+https://developer.wordpress.org/reference/functions/get_sidebar/
+https://developer.wordpress.org/themes/classic-themes/functionality/sidebars/
+
+
+
