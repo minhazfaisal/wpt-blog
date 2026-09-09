@@ -266,5 +266,76 @@ To call  get_sidebar()
 https://developer.wordpress.org/reference/functions/get_sidebar/
 https://developer.wordpress.org/themes/classic-themes/functionality/sidebars/
 
+**Step 7:** single blog post, post loop, social share, blog author
+single.php for single blog post
+
+Copy single-blog.html to single.php and modify(add header, footer, sidebar, dynamic blog post), no new css and js file needed to add.
+Calling a blog from blog page to single blog page using blog post loop. 
+
+Post loop, have_posts(), the_post(),
+https://developer.wordpress.org/reference/functions/have_posts/
+https://developer.wordpress.org/reference/functions/the_post/
+https://developer.wordpress.org/themes/classic-themes/basics/the-loop/
+
+if ( have_posts() ) :
+    while ( have_posts() ) : the_post();
+        // Your loop code
+    endwhile;
+else :
+    _e( 'Sorry, no posts were found.', 'textdomain' );
+endif;
+
+the_content()
+https://developer.wordpress.org/reference/functions/the_content/
+
+Share blog post on social media share icon
+https://dev.to/shahednasser/how-to-easily-add-share-links-for-each-social-media-platform-1l4f
+https://www.siamcomm.com/how-tos/adding-custom-sharing-buttons-facebook-twitter-linkedin-wordpress/
+https://properprogramming.com/blog/create-39-social-network-share-link-generator-and-guide-2023/
+
+<a target="_blank" href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&t=<?php the_title(); ?>">Share on Facebook</a>
+
+<a target="_blank" href="http://twitter.com/intent/tweet?text=<?php the_title(); ?>&amp;url=<?php the_permalink(); ?>"> Share on Twitter</a>
+
+<a target="_blank" title="share on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;title=<?php the_title();?>&amp;url=<?php the_permalink();?>">
+Other - (need to check)
+<a href="https://facebook.com<?php echo urlencode(get_permalink()); ?>" target="_blank">Share on Facebook</a>
+
+<a href="https://twitter.com<?php echo urlencode(get_permalink()); ?>&text=<?php echo urlencode(get_the_title()); ?>" target="_blank">Share on X</a>
+
+<a href="https://linkedin.com<?php echo urlencode(get_permalink()); ?>" target="_blank">Share on LinkedIn</a>
+
+Other - (need to check)
+<a href="<?php echo esc_url( add_query_arg('u', get_permalink(), 'https://www.facebook.com/sharer/sharer.php' )); ?>" target="_blank" rel="noopener noreferrer" aria-label="<?php echo esc_attr( 'Share "' . get_the_title() . '" on Facebook' ); ?>"> <i class="ti-facebook" aria-hidden="true"></i></a>
+
+ <a target="_blank" href="http://twitter.com/intent/tweet?text=<?php the_title(); ?>&amp;url=<?php the_permalink(); ?>"><i class="ti-twitter"></i></a>
+
+<a href="https://www.instagram.com/yourusername/" target="_blank" rel="noopener noreferrer" aria-label="Visit us on Instagram"> <i class="ti-instagram" aria-hidden="true"></i></a>
+
+<a href="<?php echo esc_url( add_query_arg( 'url', get_permalink(), 'https://www.linkedin.com/sharing/share-offsite/' )); ?>" target="_blank" rel="noopener noreferrer" aria-label="<?php echo esc_attr( 'Share "' . get_the_title() . '" on LinkedIn' ); ?>"> <i class="ti-linkedin" aria-hidden="true"></i></a>
+
+Blog author
+get_avatar() 
+<?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?>
+
+get_the_author()
+
+get_the_author_meta()
+https://developer.wordpress.org/reference/functions/get_avatar/
+https://developer.wordpress.org/reference/functions/get_author_posts_url/
+https://developer.wordpress.org/reference/functions/get_the_author_meta/
+
+**Step 8:** Comments
+single.php, comments.php
+
+Add this code to single.php for basic layout
+if ( comments_open() || get_comments_number() ) :
+	comments_template();
+endif;
+
+Search for “ wordpress.org comments template ” read the doc
+https://developer.wordpress.org/themes/classic-themes/templates/partial-and-miscellaneous-template-files/comment-template/
+
+Copy the template to comments.php
 
 
