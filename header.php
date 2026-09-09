@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.html" type="image/png" />
-  <title>Eiser ecommerce</title>
+  <title>ecommerce</title>
   <!-- links calling -->
   <?php wp_head(); ?>
 </head>
