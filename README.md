@@ -339,10 +339,10 @@ archive.php, functions.php
 Creating archive.php for category or date archive
 index.php template code is used to archive.php
 
-the_archive_title( '<h1 class="page-title">', '</h1>' );
+the_archive_title( );
 https://developer.wordpress.org/reference/functions/the_archive_title/
 
-the_archive_description( '<div class="taxonomy-description">', '</div>' );
+the_archive_description( );
 https://developer.wordpress.org/reference/functions/the_archive_description/
 
 hierarchy
