@@ -333,6 +333,25 @@ if ( comments_open() || get_comments_number() ) :
 	comments_template();
 endif;
 
+**Step 9:** archive page
+archive.php, functions.php
+
+Creating archive.php for category or date archive
+index.php template code is used to archive.php
+
+the_archive_title( '<h1 class="page-title">', '</h1>' );
+https://developer.wordpress.org/reference/functions/the_archive_title/
+
+the_archive_description( '<div class="taxonomy-description">', '</div>' );
+https://developer.wordpress.org/reference/functions/the_archive_description/
+
+hierarchy
+https://developer.wordpress.org/themes/classic-themes/basics/template-hierarchy/
+https://developer.wordpress.org/reference/functions/single_cat_title/
+
+To show the_archive_title() properly add_filter added in functions.php
+
+
 Search for “ wordpress.org comments template ” read the doc
 https://developer.wordpress.org/themes/classic-themes/templates/partial-and-miscellaneous-template-files/comment-template/
 
