@@ -357,4 +357,29 @@ https://developer.wordpress.org/themes/classic-themes/templates/partial-and-misc
 
 Copy the template to comments.php
 
+**Step 10:** search page -
+sidebar.php, search.php, searchform.php
+
+for search page template need to create search.php
+Copy index.php template to search.php
+To make search form dynamic creating searchform.php
+sidebar.php - finding the search form,  
+Sidebar search form -> searchform.php
+get_search_form();
+https://developer.wordpress.org/reference/functions/get_search_form/
+
+Two Critical Requirements for the Form:
+
+action="<?php echo esc_url( home_url( '/' ) ); ?>" – The form must be submitted to your website's homepage URL so WordPress can parse it as a query.
+
+name="s" – The text input field must have an attribute of name="s". This specific URL parameter tells WordPress to initiate a search query.
+
+Dynamic the form at searchform.php
+home_url( '/' ) name="s"
+
+esc_url()
+https://developer.wordpress.org/reference/functions/esc_url/
+
+get_search_query()
+https://developer.wordpress.org/reference/functions/get_search_query/
 
