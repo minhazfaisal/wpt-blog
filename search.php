@@ -73,6 +73,7 @@
               </article>
             <?php
             endwhile;
+            else: echo '<h2>No posts found</h2>';
           endif;
           ?>
           <!-- blog item end -->
@@ -89,7 +90,7 @@
               ?>
             </ul>
           </nav>
-          
+
         </div>
       </div>
       <!-- sidebar start -->
