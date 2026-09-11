@@ -383,3 +383,5 @@ https://developer.wordpress.org/reference/functions/esc_url/
 get_search_query()
 https://developer.wordpress.org/reference/functions/get_search_query/
 
+If there are no search results:
+Add an else: before elseif statement in search.php
