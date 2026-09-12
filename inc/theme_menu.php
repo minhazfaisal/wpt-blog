@@ -74,8 +74,10 @@
 //         $output .= '</a>';
 //     }
 // }
-?>
-<?php
+
+/*
+custom menu 
+*/
 function wpt1_menu() {
     add_theme_support('menus');
 
@@ -87,6 +89,7 @@ function wpt1_menu() {
 }
 add_action('after_setup_theme', 'wpt1_menu');
 
+// nav walker class
 class WPTB1_Walker_Nav_Menu extends Walker_Nav_Menu {
     public function start_lvl(&$output, $depth = 0, $args = array()) {
         $indent = str_repeat("\t", $depth);
