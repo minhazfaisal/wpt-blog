@@ -17,7 +17,7 @@ https://developer.wordpress.org/themes/core-concepts/theme-structure/
 
 #index.php - (blank for now)
 
+#screenshot.png - 1200*900px
+
 style.css more
 https://developer.wordpress.org/themes/classic-themes/basics/main-stylesheet-style-css/
-
-screenshot.png - 1200*900px
