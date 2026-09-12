@@ -2,22 +2,23 @@
 index.php, style.css, screenshot.png
 
 Template collect and checking,
-1. Installing wp, 
+1. Install wp, 
 2. Update wordpress settings -> permalinks, 
-3. creating theme folder in wp-content/themes/wptb1 
-In root theme folder creating
+3. create theme folder in wp-content/themes/themefolder
+In root theme folder create
 index.php 
 style.css, 
-screenshot.png 
+screenshot.png
+4. style.css - add css from doc
+5. Copy the template files to theme folder
+6. Copy the code -> blog.html to index.php(default blog)
+7. Activate the theme
 
 #Core concept
 https://developer.wordpress.org/themes/core-concepts/theme-structure/
 
 #style.css - adding css from doc - https://developer.wordpress.org/themes/core-concepts/main-stylesheet/
 
-#index.php - (blank for now)
-
 #screenshot.png - 1200*900px
 
-style.css more
-https://developer.wordpress.org/themes/classic-themes/basics/main-stylesheet-style-css/
+#index.php - (blog.html codes)
