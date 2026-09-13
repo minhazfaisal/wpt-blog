@@ -57,11 +57,12 @@ body_class()
 <body class="<?php body_class(); ?>">
 
 ==Step 3: inc folder in theme root==
-functions.php, inc/theme_enquequ.php
+functions.php, inc/theme_enqueue.php
 
-1. Split the codes in separate files
+1. Split the codes in separate files - inc/theme_enqueue.php
+2. Connect to functions.php
 
-To maintain functions.php easily create a inc folder -> theme_enqueqe.php file 
+To maintain functions.php easily, create a inc folder -> theme_enqueqe.php file 
 Put all the css js in it, connect file to functions.php using require()
 
 require() / require_once(): If the target file is missing, PHP triggers a fatal error and immediately stops running the script.
@@ -81,3 +82,4 @@ Ideal for linking stylesheets, JavaScript files, and images via functions like w
 https://developer.wordpress.org/reference/functions/get_template_directory_uri/
 
 https://wordpress.stackexchange.com/questions/208629/difference-and-usage-of-uri-e-g-get-directory-uri-and-absolute-path-e-g-get
+
