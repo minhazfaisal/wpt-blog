@@ -377,3 +377,68 @@ https://developer.wordpress.org/themes/classic-themes/basics/template-hierarchy/
 https://developer.wordpress.org/reference/functions/single_cat_title/
 
 To show the_archive_title() properly add_filter added in functions.php
+
+==Step 10: search page in sidebar==
+sidebar.php, search.php, searchform.php
+
+1. For search result page template need to create search.php
+2. Copy index.php template to search.php
+3. To make search form dynamic creating searchform.php
+4. sidebar.php - cut search form, paste to searchform.php 
+5. Call the sidebar in sidebar.php
+6. Make it dynamic at searchform.php
+7. If there is no search result - add else - before elseif statement in search.php
+
+
+get_search_form();
+https://developer.wordpress.org/reference/functions/get_search_form/
+
+esc_url()
+https://developer.wordpress.org/reference/functions/esc_url/
+
+Critical Requirements for the Form:
+
+action="<?php echo esc_url( home_url( '/' ) ); ?>" – The form must be submitted to your website's homepage URL so WordPress can parse it as a query.
+
+method ="get"
+
+name="s" – The text input field must have an attribute of name="s". This specific URL parameter tells WordPress to initiate a search query.
+
+==Step 11: banner content, page link in titlebar ==
+index.php, archive.php, single.php, search.php, style.css
+
+1. search.php - titlebar - page title - get_search_query() 
+2. search.php - page link - breadcrumb
+3. Index.php - code added but it is currently set as latest blog page - need to check again
+4. archive.php - titlebar page title, page link
+5. single.php - 
+6. If endif statement is needed
+7. Styling excerpt - style.css
+
+Breadcrumb - create a link showing the current search word.
+
+home_url( '/' )
+Get the website's home URL.
+
+get_search_query()
+Gets the word the user searched for.
+https://developer.wordpress.org/reference/functions/get_search_query/
+
+get_search_link()
+Get the current search URL.
+
+esc_url(...)
+Makes the URL safe for use inside href
+
+esc_html() 
+safely displays text as HTML.
+
+get_option( 'page_for_posts' ) 
+This gets the ID of the WordPress page selected as the Posts page
+
+get_pagenum_link() gets the current archive URL.
+
+get_the_archive_title() gets the archive name.
+
+the_archive_title()
+the_archive_description()
