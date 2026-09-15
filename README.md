@@ -142,7 +142,9 @@ then register_nav_menus() defines where those menus live
 https://developer.wordpress.org/reference/functions/add_theme_support/
 
 
-==Step 5: blog post using loop==
+
+
+== Step 5: blog post using loop ==
 index.php, inc/theme_support.php, functions.php
 
 1. index.php - keeping one article to show default blog post,
