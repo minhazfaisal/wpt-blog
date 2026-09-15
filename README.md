@@ -362,7 +362,8 @@ archive.php, functions.php
 1. Creating archive.php for category or date archive
 2. index.php template code is used to archive.php
 3. Add archive title, description, 
-4. Remove category/day text, add add_filter in functions.php
+4. Showing blog post according to category or date will be same
+5. Remove category/day text, add add_filter in functions.php
 
 
 the_archive_title();
