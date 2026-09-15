@@ -30,3 +30,9 @@ Text Domain: wpt1
     color: #fff !important;
     background: #71CD14 !important;
 }
+
+/* excerpt in single.php */
+.excert{
+    padding: 0 0 0px 10px;
+    border-left: 1px solid #71CD14;
+}
