@@ -11,17 +11,20 @@
             <!-- <p>Very us move be blessed multiply night</p> -->
              <?php the_archive_description( '<p>', '</p>' ); ?>
           </div>
-          <!-- <div class="page_link">
-            <a href="index.html">Home</a>
-            <a href="blog.html">Blog </a>
-          </div> -->
           <div class="page_link">
+            <!-- <a href="index.html">Home</a>
+            <a href="blog.html">Blog </a> -->
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Blog</a>
-            <a href="<?php the_permalink(); ?>"><?php single_cat_title(); ?></a>
+            <?php $bp_id = get_option( 'page_for_posts' ); ?>
+            <?php if ( $bp_id ) : ?>
+              <a href="<?php echo esc_url( get_permalink( $bp_id ) ); ?>">
+                <?php echo esc_html( get_the_title( $bp_id ) ); ?>
+              </a>
+            <?php endif; ?>
+            <a href="<?php echo esc_url( get_pagenum_link() ); ?>">
+              <?php echo esc_html( get_the_archive_title() ); ?>
+            </a>
           </div>
-
-
         </div>
       </div>
     </div>
@@ -30,66 +33,68 @@
   <section class="blog_area section_gap">
     <div class="container">
       <div class="row">
+        <!-- blog -->
         <div class="col-lg-8 mb-5 mb-lg-0">
           <div class="blog_left_sidebar">
             <!-- blog item start -->
             <?php
-            if ( have_posts() ) :
-              while ( have_posts() ) : the_post();
-            ?>
-            <article class="blog_item">
-              <div class="blog_item_img">
-                <!-- featured image -->
-                <a href="<?php the_permalink(); ?>" alt="<?php the_title_attribute(); ?>">
-                  <?php the_post_thumbnail('large', array('class' => 'card-img rounded-0')); ?>
-                </a>
-                <!-- <img class="card-img rounded-0" src="<?php echo get_template_directory_uri(); ?>/img/blog/main-blog/m-blog-1.jpg" alt=""> -->
-                <!-- date -->
-                <?php 
-                  $a_y = get_the_time( 'Y' ); 
-                  $a_m = get_the_time( 'm' ); 
-                  $a_d = get_the_time( 'd' ); 
+            if (have_posts()):
+              while (have_posts()):
+                the_post();
                 ?>
-                <a href="<?php echo esc_url( get_day_link( $a_y, $a_m, $a_d ) ); ?>" class="blog_item_date">
-                  <h3><?php echo get_the_time('d'); ?></h3>
-                  <p><?php echo get_the_time('M'); ?></p>
-                </a>
-                <!-- <a href="#" class="blog_item_date">
-                  <h3>15</h3>
-                  <p>Jan</p>
-                </a> -->
-              </div>
-              <div class="blog_details">
-                <!-- blog title -->
-                <a class="d-inline-block" href="<?php the_permalink(); ?>">
-                  <?php the_title( '<h2>', '</h2>' ); ?>
-                </a>
-                <!-- <a class="d-inline-block" href="single-blog.html">
-                  <h2>Google inks pact for new 35-storey office</h2>
-                </a> -->
-                <!-- excerpt -->
-                <?php the_excerpt(); ?>
-                <!-- <p>That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.</p> -->
-                <!-- category, comments. -->
-                <ul class="blog-info-link">
-                  <li>
-                    <a href="#">
-                      <i class="ti-user"></i> <?php the_category( ', ' ); ?>
+                <article class="blog_item">
+                  <div class="blog_item_img">
+                    <!-- featured image -->
+                    <a href="<?php the_permalink(); ?>" alt="<?php the_title_attribute(); ?>">
+                      <?php the_post_thumbnail('large', array('class' => 'card-img rounded-0')); ?>
                     </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="ti-comments"></i> <?php comments_number( 'No Comments', '1 Comment', '% Comments' ); ?>
+                    <!-- <img class="card-img rounded-0" src="<?php echo get_template_directory_uri(); ?>/img/blog/main-blog/m-blog-1.jpg" alt=""> -->
+                    <!-- date -->
+                    <?php
+                    $a_y = get_the_time('Y');
+                    $a_m = get_the_time('m');
+                    $a_d = get_the_time('d');
+                    ?>
+                    <a href="<?php echo esc_url(get_day_link($a_y, $a_m, $a_d)); ?>" class="blog_item_date">
+                      <h3><?php echo get_the_time('d'); ?></h3>
+                      <p><?php echo get_the_time('M'); ?></p>
                     </a>
-                  </li>
-                </ul>
-                <!-- <ul class="blog-info-link">
-                  <li><a href="#"><i class="ti-user"></i> Travel, Lifestyle</a></li>
-                  <li><a href="#"><i class="ti-comments"></i> 03 Comments</a></li>
-                </ul> -->
-              </div>
-            </article>
-            <?php 
+                    <!-- <a href="#" class="blog_item_date">
+                    <h3>15</h3>
+                    <p>Jan</p>
+                  </a> -->
+                  </div>
+                  <div class="blog_details">
+                    <!-- blog title -->
+                    <a class="d-inline-block" href="<?php the_permalink(); ?>">
+                      <?php the_title('<h2>', '</h2>'); ?>
+                    </a>
+                    <!-- <a class="d-inline-block" href="single-blog.html">
+                    <h2>Google inks pact for new 35-storey office</h2>
+                  </a> -->
+                    <!-- excerpt -->
+                    <?php the_excerpt(); ?>
+                    <!-- <p>That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.</p> -->
+                    <!-- category, comments. -->
+                    <ul class="blog-info-link">
+                      <li>
+                        <a href="#">
+                          <i class="ti-user"></i> <?php the_category(', '); ?>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="ti-comments"></i> <?php comments_number('No Comments', '1 Comment', '% Comments'); ?>
+                        </a>
+                      </li>
+                    </ul>
+                    <!-- <ul class="blog-info-link">
+                    <li><a href="#"><i class="ti-user"></i> Travel, Lifestyle</a></li>
+                    <li><a href="#"><i class="ti-comments"></i> 03 Comments</a></li>
+                  </ul> -->
+                  </div>
+                </article>
+              <?php
               endwhile;
             endif;
             ?>
@@ -98,44 +103,43 @@
               <!-- pagination -->
               <ul class="pagination">
                 <?php
-                  the_posts_pagination( array(
-                    'mid_size'  => 2,
-                    // 'end_size'  => 1,
-                    'prev_text' => __( '<span class="ti-arrow-left"></span>', 'wpt1' ),
-                    'next_text' => __( '<span class="ti-arrow-right"></span>', 'wpt1' ),
-                  ));
+                the_posts_pagination(array(
+                  'mid_size' => 2,
+                  // 'end_size'  => 1,
+                  'prev_text' => __('<span class="ti-arrow-left"></span>', 'wpt1'),
+                  'next_text' => __('<span class="ti-arrow-right"></span>', 'wpt1'),
+                ));
                 ?>
               </ul>
               <!-- <ul class="pagination">
-                <li class="page-item">
-                  <a href="#" class="page-link" aria-label="Previous">
-                    <span aria-hidden="true">
-                      <span class="ti-arrow-left"></span>
-                    </span>
-                  </a>
-                </li>
-                <li class="page-item">
-                  <a href="#" class="page-link">1</a>
-                </li>
-                <li class="page-item active">
-                  <a href="#" class="page-link">2</a>
-                </li>
-                <li class="page-item">
-                  <a href="#" class="page-link" aria-label="Next">
-                    <span aria-hidden="true">
-                      <span class="ti-arrow-right"></span>
-                    </span>
-                  </a>
-                </li>
-              </ul> -->
+                  <li class="page-item">
+                    <a href="#" class="page-link" aria-label="Previous">
+                      <span aria-hidden="true">
+                        <span class="ti-arrow-left"></span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="page-link">1</a>
+                  </li>
+                  <li class="page-item active">
+                    <a href="#" class="page-link">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="page-link" aria-label="Next">
+                      <span aria-hidden="true">
+                        <span class="ti-arrow-right"></span>
+                      </span>
+                    </a>
+                  </li>
+                </ul> -->
             </nav>
           </div>
         </div>
-        <!-- sidebar start -->
+        <!-- sidebar -->
         <div class="col-lg-4">
           <?php get_sidebar(); ?>
         </div>
-        <!-- sidebar end -->
 
       </div>
     </div>
