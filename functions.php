@@ -10,11 +10,18 @@ custom menu
 require get_template_directory() . '/inc/theme_menu.php';
 
 /*
-additional theme support
+additional theme support - featured images,
 */
 require get_template_directory() . '/inc/theme_support.php';
 
-// archive.php - archive name or date name display
+/*
+sidebar widget -
+*/
+require get_template_directory() . '/inc/register_sidebar.php';
+
+/*
+archive.php - archive name or date name display
+*/
 add_filter( 'get_the_archive_title', function ( $title ) {
 	if ( is_category() ) {
 		return single_cat_title( '', false );
@@ -24,4 +31,5 @@ add_filter( 'get_the_archive_title', function ( $title ) {
   }
   return $title;
 } );
+
 ?>
