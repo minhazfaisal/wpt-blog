@@ -35,7 +35,7 @@
   -->
   <!-- category widget -->
   <?php dynamic_sidebar('sb_category'); ?>
-  
+  <!--  
   <aside class="single_sidebar_widget popular_post_widget">
     <h3 class="widget_title">Recent Post</h3>
     <div class="media post_item">
@@ -57,6 +57,10 @@
       </div>
     </div>
   </aside>
+  -->
+  <!-- recent post widget -->
+  <?php dynamic_sidebar('sb_recent_posts'); ?>
+  <!--
   <aside class="single_sidebar_widget tag_cloud_widget">
     <h4 class="widget_title">Tag Clouds</h4>
     <ul class="list">
@@ -68,6 +72,10 @@
       </li>
     </ul>
   </aside>
+  -->
+  <!-- tag widget -->
+  <?php dynamic_sidebar('sb_tag'); ?>
+  <!--  
   <aside class="single_sidebar_widget instagram_feeds">
     <h4 class="widget_title">Instagram Feeds</h4>
     <ul class="instagram_row flex-wrap">
@@ -83,6 +91,10 @@
       </li>
     </ul>
   </aside>
+  -->
+  <!-- gallery widget -->
+  <?php dynamic_sidebar('sb_gallery'); ?>
+  <!--  
   <aside class="single_sidebar_widget newsletter_widget">
     <h4 class="widget_title">Newsletter</h4>
     <form action="#">
@@ -92,4 +104,8 @@
       <button class="main_btn rounded-0 w-100" type="submit">Subscribe</button>
     </form>
   </aside>
+  -->
+  <!-- video widget -->
+  <?php dynamic_sidebar('sb_video'); ?>
+
 </div>
