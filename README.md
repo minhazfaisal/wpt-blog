@@ -443,8 +443,8 @@ get_the_archive_title() gets the archive name.
 the_archive_title()
 the_archive_description()
 
-Step 12: sidebar blog -
-inc/register_sidebar.php, functions.php, sidebar.php
+==Step 12: sidebar blog==
+inc/register_sidebar.php, functions.php, sidebar.php, style.css
 
 1. new file inc/register_sidebar.php to create widget, 
 2. connected to functions.php(require)
@@ -452,8 +452,11 @@ inc/register_sidebar.php, functions.php, sidebar.php
 4. Calling dynamic_sidebar() to sidebar.php and removing html code
 5. Widget will shown in appearance
 6. Add category list to category widget
-7. For category title, need to add title before category list and add css class to title Additional CSS class. Also need to change category list settings
-
+7. For category title, need to add title before category list and add css class(widget_title) to title Additional CSS class, adding a group, Also need to change category list settings
+8. Adding the recent post, almost the same process, remove ul, inspect and add css to style.css(.media-body) for perfect style. I did not add hover style.
+9. Adding tag cloud, ul needed, custom css needed. I did not add hover style.
+10. Adding gallery instead of feed. 
+11. Adding video instead of newsletter
 
 sidebar
 https://developer.wordpress.org/themes/classic-themes/functionality/sidebars/
@@ -464,4 +467,5 @@ https://developer.wordpress.org/reference/functions/register_sidebar/
 dynamic_sidebar()
 <?php dynamic_sidebar( 'primary' ); ?>
 https://developer.wordpress.org/reference/functions/dynamic_sidebar/
+
 
