@@ -1,5 +1,5 @@
 /*
-Theme Name: WPT1 Blog
+Theme Name: WPT2 Blog
 Theme URI: https://wpt.org/themes/wptb1/
 Author: the wwm team
 Author URI: https://wwm.org/
@@ -10,9 +10,11 @@ Requires at least: 5.0
 Tested up to: 5.4
 Requires PHP: 7.0
 License: commercial
-License URI: https://wpt.org/themes/wptb1/
+License URI: https://wpt.org/themes/wptb2/
 Text Domain: wpt1
 */
+
+
 /* pagination css - blogs*/
 .pagination .nav-links .page-numbers {
     padding: 10px 20px !important;
@@ -35,4 +37,31 @@ Text Domain: wpt1
 .excert{
     padding: 0 0 0px 10px;
     border-left: 1px solid #71CD14;
+}
+
+/* sidebar recent post widget css */
+.media-body a{
+    font-family: "Heebo", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #2a2a2a;
+    line-height: 20px;
+    margin-bottom: 6px;
+    transition: all 0.3s linear;
+}
+.media-body time {
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 0px;
+}
+.tag_cloud_widget a {
+    display: inline-block;
+    border: 1px solid #eeeeee;
+    background: #fff;
+    padding: 4px 20px;
+    margin-bottom: 8px;
+    margin-right: 5px;
+    transition: all 0.3s ease 0s;
+    color: #888888;
+    font-size: 13px !important;
 }
