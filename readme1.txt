@@ -453,7 +453,7 @@ inc/register_sidebar.php, functions.php, sidebar.php, style.css
 5. Widget will shown in appearance
 6. Add category list to category widget
 7. For category title, need to add title before category list and add css class(widget_title) to title Additional CSS class, adding a group, Also need to change category list settings
-8. Adding the recent post, almost the same process, remove ul, inspect and add css to style.css(.media-body) for perfect style. I did not add hover style.
+8. Adding the recent post, almost the same process, remove ul, inspect and add css to style.css(.media-body), customize the latest post block settings for perfect style. I did not add hover style.
 9. Adding tag cloud, ul needed, custom css needed. I did not add hover style.
 10. Adding gallery instead of feed. 
 11. Adding video instead of newsletter
@@ -467,5 +467,18 @@ https://developer.wordpress.org/reference/functions/register_sidebar/
 dynamic_sidebar()
 <?php dynamic_sidebar( 'primary' ); ?>
 https://developer.wordpress.org/reference/functions/dynamic_sidebar/
+
+
+==Step 13: footer widget==
+inc/register_sidebar.php, footer.php, style.css(if needed)
+
+1. Check the layout from footer.php to add page list
+2. in inc/register_sidebar.php calling functions, (we can use the_widget function also)
+3. To add pages, add a group (add title, add page list). Btw, pages are not created properly so only the sample page will be shown.
+4. Check the layout to add quick links as before, custom html blocks will be used. 
+5. Copy the ul li a code here
+6. Features and resources will be same
+7. Newsletter (not now)
+
 
 
