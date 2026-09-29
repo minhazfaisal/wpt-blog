@@ -10,7 +10,7 @@
 
 Code with guideline
 ```html
-https://github.com/minhazfaisal/wpt-blog/blob/main/readme1.txt
+https://github.com/minhazfaisal/wpt-blog/blob/main/doc1.md
 ```
 
 <img src="screenshot.jpg" alt="Alt text" width="400px" height="auto">
