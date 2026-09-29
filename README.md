@@ -1,4 +1,4 @@
->Check the readme.txt files  
+>Check the doc1.md file  
 
 <table>
 <tr>
