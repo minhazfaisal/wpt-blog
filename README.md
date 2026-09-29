@@ -8,4 +8,8 @@
 </tr>
 </table>
 
+```html
+code with guideline
+```
+
 <img src="screenshot.jpg" alt="Alt text" width="400px" height="auto">
