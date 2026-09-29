@@ -8,7 +8,7 @@
 </tr>
 </table>
 
-Code with guidelink
+Code with guideline
 ```html
 https://github.com/minhazfaisal/wpt-blog/blob/main/readme1.txt
 ```
