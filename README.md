@@ -1,6 +1,6 @@
 ==Check the readme.txt files==  
 
-<div style="background-color: #f0f0f0; padding: 20px;">
+<div style="background-color: red; padding: 20px; display:block;">
   Follow the steps.
 </div>
 
