@@ -1,4 +1,5 @@
-==Step 1: Template installing==
+>Step 1: Template installing  
+
 index.php, style.css, screenshot.png
 
 Template collect and checking,
