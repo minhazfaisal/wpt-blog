@@ -1,7 +1,11 @@
-==Check the readme.txt files==  
+>Check the readme.txt files  
 
-<div style="background-color: red; padding: 20px; display:block;">
-  Follow the steps.
-</div>
+<table>
+<tr>
+<td style="background-color: #FFE5E5; padding: 20px; border-radius: 5px;">
+<strong>Follow the steps.</strong>
+</td>
+</tr>
+</table>
 
 <img src="screenshot.jpg" alt="Alt text" width="400px" height="auto">
