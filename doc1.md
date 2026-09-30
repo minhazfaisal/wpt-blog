@@ -16,8 +16,9 @@ screenshot.png
 7. Activate the theme
 
 #Core concept
+```html
 https://developer.wordpress.org/themes/core-concepts/theme-structure/
-
+```
 #style.css - adding css from doc - https://developer.wordpress.org/themes/core-concepts/main-stylesheet/
 
 #screenshot.png - 1200*900px
