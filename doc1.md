@@ -356,7 +356,7 @@ Note: (root css) - written css might not work if `wp_enqueue_style( 'theme_css',
 }
 ```
 
-**Settings:** Reading → blog pages show at most ## (change the value)
+**Settings:** Reading → change the value
 
 ---
 
