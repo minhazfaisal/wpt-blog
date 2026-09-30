@@ -19,13 +19,16 @@ screenshot.png
 ```html
 https://developer.wordpress.org/themes/core-concepts/theme-structure/
 ```
-#style.css - adding css from doc - https://developer.wordpress.org/themes/core-concepts/main-stylesheet/
-
+#style.css - adding css from doc - 
+```html
+https://developer.wordpress.org/themes/core-concepts/main-stylesheet/
+```
 #screenshot.png - 1200*900px
 
 #index.php - (blog.html codes)
 
-==Step 2: css and js links, blog page, index page==
+>Step 2: css and js links, blog page, index page  
+
 functions.php, header.php, footer.php 
 
 connecting functions.php, header.php, footer.php, website images
