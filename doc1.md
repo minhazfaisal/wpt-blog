@@ -229,7 +229,8 @@ add_theme_support('menus');
 9. Number of comments
 10. Pagination
 
-**Inside functions.php (inc/theme_support.php)** - enabling feature image in editor by adding theme support
+**Inside functions.php (inc/theme_support.php)** - enabling feature image in editor by adding theme support  
+
 **Inside style.css** - pagination css might be added (inc/theme_enqueue.php need to update if needed, this page was named inc/enqueue.php)
 
 **Showing default blog post:**
@@ -317,7 +318,7 @@ comments_popup_link(
 ```
 - https://developer.wordpress.org/reference/functions/comments_number/
 
-**Blog pagination:**
+**Blog pagination:** `the_posts_pagination()`
 ```php
 <?php the_posts_pagination( array(
     'mid_size'  => 2,
