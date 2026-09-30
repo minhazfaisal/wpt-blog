@@ -8,7 +8,6 @@
 
 >index.php, style.css, screenshot.png
 
-
 Template collect and checking,
 1. Install wp, 
 2. Update wordpress settings -> permalinks, 
