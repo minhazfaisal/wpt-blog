@@ -18,7 +18,10 @@ require get_template_directory() . '/inc/theme_support.php';
 sidebar widget -
 */
 require get_template_directory() . '/inc/register_sidebar.php';
-
+/*
+breadcrumb -
+*/
+require get_template_directory() . '/inc/breadcrumb.php';
 /*
 archive.php - archive name or date name display
 */
