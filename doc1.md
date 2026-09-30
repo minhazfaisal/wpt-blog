@@ -30,7 +30,6 @@
 
 **screenshot.png** - 1200×900px
 
-**index.php** - (blog.html codes)
 
 ---
 
