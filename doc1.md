@@ -1,12 +1,11 @@
->Step 1: Template installing  
-
 <table>
 <tr>
 <td style="background-color: #d9d9d9; padding: 20px; border-radius: 5px;">
-<strong>index.php, style.css, screenshot.png</strong>
+<strong>Step 1: Template installing  </strong>
 </td>
 </tr>
 </table>
+>index.php, style.css, screenshot.png
 
 
 Template collect and checking,
