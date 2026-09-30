@@ -1,6 +1,13 @@
 >Step 1: Template installing  
 
-index.php, style.css, screenshot.png
+<table>
+<tr>
+<td style="background-color: #d9d9d9; padding: 20px; border-radius: 5px;">
+<strong>index.php, style.css, screenshot.png</strong>
+</td>
+</tr>
+</table>
+
 
 Template collect and checking,
 1. Install wp, 
