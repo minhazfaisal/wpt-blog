@@ -139,7 +139,7 @@ Additional reference: https://wordpress.stackexchange.com/questions/208629/diffe
 2. Connect to functions.php → `require()`
 3. Creating menu from appearance
 4. Calling the menu to header.php → `wp_nav_menu()`
-5. Customize style → style.css → menu style
+5. Customize style → style.css → menu style if needed
 
 **Create a custom menu in wordpress:**
 - https://www.wpbeginner.com/wp-themes/how-to-add-custom-navigation-menus-in-wordpress-3-0-themes/
@@ -187,8 +187,8 @@ Example output:
 </ul>
 ```
 
-**Why %3$s instead of writing the <li> elements?**
-- Because WordPress creates the <li> elements automatically based on the menu configured in the admin panel. %3$s is a placeholder where those items are inserted.
+**Why %3$s instead of writing the li elements?**
+- Because WordPress creates the `<li>` elements automatically based on the menu configured in the admin panel. %3$s is a placeholder where those items are inserted.
 
 **Walker:**
 ```php
