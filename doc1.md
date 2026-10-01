@@ -777,6 +777,8 @@ Copy the template to comments.php
 4. keeping a copy of sample-config.php is good practice
 5. Sample options is added to wp admin panel
 
+Note - too many files, thats why only sample-config.php is uploaded to git
+
 **Doc**
 - https://devs.redux.io/
 
