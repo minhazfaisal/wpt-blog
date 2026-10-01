@@ -758,3 +758,27 @@ Copy the template to comments.php
     content: " / ";
 }
 ```
+<table>
+<tr>
+<td style="background-color: #d9d9d9; padding: 20px; border-radius: 5px;">
+<strong>Step 15: Option framework redux</strong>
+</td>
+</tr>
+</table>
+
+**Files:** option_tree, functions.php, 
+
+**Steps:**
+1. Download and integrate redux to root folder
+2. Renaming the folder to option_tree
+3. Connection to functions.php using 
+   `/option_tree/redux-core/framework.php; or /option_tree/redux-framework.php;`
+   and `/option_tree/sample/sample-config.php;`
+4. keeping a copy of sample-config.php is good practice
+5. Sample options is added to wp admin panel
+
+**Doc**
+- https://devs.redux.io/
+
+**Download** 
+- https://github.com/reduxframework/redux-framework
