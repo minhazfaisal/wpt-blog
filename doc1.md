@@ -758,6 +758,7 @@ Copy the template to comments.php
     content: " / ";
 }
 ```
+---
 <table>
 <tr>
 <td style="background-color: #d9d9d9; padding: 20px; border-radius: 5px;">
