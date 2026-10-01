@@ -18,10 +18,18 @@ require get_template_directory() . '/inc/theme_support.php';
 sidebar widget -
 */
 require get_template_directory() . '/inc/register_sidebar.php';
+
 /*
 breadcrumb -
 */
 require get_template_directory() . '/inc/breadcrumb.php';
+
+/*
+redux framework -
+*/
+require get_template_directory() . '/option_tree/redux-core/framework.php';
+require get_template_directory() . '/option_tree/sample/sample-config.php';
+
 /*
 archive.php - archive name or date name display
 */
