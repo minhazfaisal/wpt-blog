@@ -1,14 +1,17 @@
+<?php global $wpdev; ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.html" type="image/png" />
-  <title>ecommerce</title>
-  <!-- links calling -->
+  <link rel="icon" href="<?php echo $wpdev['h_fav_img']['url']; ?>" type="image" />
+  <title>Ecommerce/blog</title>
+  <!-- css links calling -->
   <?php wp_head(); ?>
 </head>
+
 <body class="<?php body_class(); ?>">
 
   <header class="header_area">
@@ -17,8 +20,8 @@
         <div class="row">
           <div class="col-lg-7">
             <div class="float-left">
-              <p>Phone: +01 256 25 235</p>
-              <p>email: <a href="https://preview.colorlib.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d2bbbcb4bd92b7bba1b7a0fcb1bdbf">[email&#160;protected]</a></p>
+              <p><?php echo $wpdev['top1']; ?></p>
+              <p><?php echo $wpdev['top2']; ?></p>
             </div>
           </div>
           <!-- 
@@ -97,8 +100,8 @@
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light w-100">
 
-          <a class="navbar-brand logo_h" href="index.html">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="" />
+          <a class="navbar-brand logo_h" href="<?php echo home_url('/'); ?>">
+            <img src="<?php echo $wpdev['h_logo_img']['url']; ?>" alt="<?php echo $wpdev['title']; ?>" />
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="icon-bar"></span>
