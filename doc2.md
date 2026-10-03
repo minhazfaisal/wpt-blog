@@ -101,4 +101,30 @@ Note - too many files, thats why only sample-config.php is uploaded to git
 **Download** 
 - https://github.com/reduxframework/redux-framework
 
->Note : because of the redux option tree, a lot of css will be inherited by default, that’s why the website's style will be hampered. 
+>Note : because of the redux option tree, a lot of css will be inherited by default, that’s why the website's style will be hampered.
+---
+==Step 16: Option framework - header==
+option_tree/sample/sample-config.php, sample/sections/media-uploads/logo.php, header.php, style.css, sample/sections/media-uploads/fav.php, sample/sections/media-uploads/toptext.php, 
+
+1. Change the $opt_name, menu_title, page_title, dev_mode, admin_bar, customizer, page_priority, menu_icon, intro_text, footer_text, 
+2. Get icon class form icon library
+3. Showing logo, editing code, just use the start basic fields, copy paste it.
+4. Also need to modify the sample/sections php files
+5. Then calling the globar variable into header.php, and calling the variable + logo id + url(for img url parameter is needed)
+6. Custom css for logo if needed.
+7. In <a> tag, adding dynamic home url
+8. In Alt we can add page title, just need to add text field under logo
+9. Favicon(same process)
+10. If the favicon is already added from the general setting then the theme opt favicon will not work.
+11. It will be easy if someone delete the fields from sample-config.php and copy the necessary code from backup. This will help to reduce the duplicate css classes. 
+12. Top bar text same process
+```html
+<a class="navbar-brand logo_h" href="<?php echo home_url('/'); ?>">
+   <img src="<?php echo $wpdev['logo_img']['url']; ?>" alt="Logo" />
+</a>
+```
+**Icon library**
+https://developer.wordpress.org/resource/dashicons/
+http://elusiveicons.com/icons/
+---
+
