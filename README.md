@@ -12,5 +12,7 @@ Code with guideline
 ```html
 https://github.com/minhazfaisal/wpt-blog/blob/main/doc1.md
 ```
-
+```html
+https://github.com/minhazfaisal/wpt-blog/blob/main/doc2.md
+```
 <img src="screenshot.jpg" alt="Alt text" width="400px" height="auto">
