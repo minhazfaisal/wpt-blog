@@ -14,7 +14,7 @@ if ( ! class_exists( 'Redux' ) ) {
 }
 
 // This is your option name where all the Redux data is stored.
-$opt_name = 'redux_demo';  // YOU MUST CHANGE THIS.  DO NOT USE 'redux_demo' IN YOUR PROJECT!!!
+$opt_name = 'wpdev';  // YOU MUST CHANGE THIS.  DO NOT USE 'redux_demo' IN YOUR PROJECT!!!
 
 // Uncomment to disable demo mode.
 /* Redux::disable_demo(); */  // phpcs:ignore Squiz.PHP.CommentedOutCode
@@ -87,16 +87,16 @@ $args = array(
 	'allow_sub_menu'            => true,
 
 	// The text to appear in the admin menu.
-	'menu_title'                => esc_html__( 'Sample Options', 'your-textdomain-here' ),
+	'menu_title'                => esc_html__( 'Theme Options', 'wpt1' ),
 
 	// The text to appear on the page title.
-	'page_title'                => esc_html__( 'Sample Options', 'your-textdomain-here' ),
+	'page_title'                => esc_html__( 'Theme Options', 'wpt1' ),
 
 	// Disable to create your own Google fonts loader.
 	'disable_google_fonts_link' => false,
 
 	// Show the panel pages on the admin bar.
-	'admin_bar'                 => true,
+	'admin_bar'                 => false,
 
 	// Icon for the admin bar menu.
 	'admin_bar_icon'            => 'dashicons-portfolio',
@@ -108,10 +108,10 @@ $args = array(
 	'global_variable'           => $opt_name,
 
 	// Show the time the page took to load, etc. (forced on while on localhost or when WP_DEBUG is enabled).
-	'dev_mode'                  => true,
+	'dev_mode'                  => false,
 
 	// Enable basic customizer support.
-	'customizer'                => true,
+	'customizer'                => false,
 
 	// Allow the panel to open expanded.
 	'open_expanded'             => false,
@@ -120,7 +120,7 @@ $args = array(
 	'disable_save_warn'         => false,
 
 	// Order where the menu appears in the admin area. If there is any conflict, something will not show. Warning.
-	'page_priority'             => 90,
+	'page_priority'             => 25,
 
 	// For a full list of options, visit: https://codex.wordpress.org/Function_Reference/add_submenu_page#Parameters.
 	'page_parent'               => 'themes.php',
@@ -129,7 +129,7 @@ $args = array(
 	'page_permissions'          => 'manage_options',
 
 	// Specify a custom URL to an icon.
-	'menu_icon'                 => '',
+	'menu_icon'                 => 'dashicons-layout',
 
 	// Force your panel to always open to a specific tab (by id).
 	'last_tab'                  => '',
@@ -229,13 +229,13 @@ $args = array(
 $args['admin_bar_links'][] = array(
 	'id'    => 'redux-docs',
 	'href'  => '//devs.redux.io/',
-	'title' => __( 'Documentation', 'your-textdomain-here' ),
+	'title' => __( 'Documentation', 'wpt1' ),
 );
 
 $args['admin_bar_links'][] = array(
 	'id'    => 'redux-support',
 	'href'  => '//github.com/ReduxFramework/redux-framework/issues',
-	'title' => __( 'Support', 'your-textdomain-here' ),
+	'title' => __( 'Support', 'wpt1' ),
 );
 
 // SOCIAL ICONS → Set up custom links in the footer for quick links in your panel footer icons.
@@ -243,22 +243,22 @@ $args['admin_bar_links'][] = array(
 // If these are left unchanged, they will not display in your panel!
 $args['share_icons'][] = array(
 	'url'   => '//github.com/ReduxFramework/ReduxFramework',
-	'title' => __( 'Visit us on GitHub', 'your-textdomain-here' ),
+	'title' => __( 'Visit us on GitHub', 'wpt1' ),
 	'icon'  => 'el el-github',
 );
 $args['share_icons'][] = array(
 	'url'   => '//www.facebook.com/pages/Redux-Framework/243141545850368',
-	'title' => __( 'Like us on Facebook', 'your-textdomain-here' ),
+	'title' => __( 'Like us on Facebook', 'wpt1' ),
 	'icon'  => 'el el-facebook',
 );
 $args['share_icons'][] = array(
 	'url'   => '//twitter.com/reduxframework',
-	'title' => __( 'Follow us on Twitter', 'your-textdomain-here' ),
+	'title' => __( 'Follow us on Twitter', 'wpt1' ),
 	'icon'  => 'el el-twitter',
 );
 $args['share_icons'][] = array(
 	'url'   => '//www.linkedin.com/company/redux-framework',
-	'title' => __( 'Find us on LinkedIn', 'your-textdomain-here' ),
+	'title' => __( 'Find us on LinkedIn', 'wpt1' ),
 	'icon'  => 'el el-linkedin',
 );
 
@@ -271,13 +271,13 @@ if ( ! isset( $args['global_variable'] ) || false !== $args['global_variable'] )
 	}
 
 	// translators:  Panel opt_name.
-	$args['intro_text'] = '<p>' . sprintf( esc_html__( 'Did you know that Redux sets a global variable for you? To access any of your saved options from within your code you can use your global variable: $%1$s', 'your-textdomain-here' ), '<strong>' . $v . '</strong>' ) . '<p>';
+	$args['intro_text'] = '<p>' . sprintf( esc_html__(''), '<strong>' . $v . '</strong>' ) . '</p>';
 } else {
-	$args['intro_text'] = '<p>' . esc_html__( 'This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.', 'your-textdomain-here' ) . '</p>';
+	$args['intro_text'] = '<p>' . esc_html__('') . '</p>';
 }
 
 // Add content after the form.
-$args['footer_text'] = '<p>' . esc_html__( 'This text is displayed below the options panel. It isn\'t required, but more info is always better! The footer_text field accepts all HTML.', 'your-textdomain-here' ) . '</p>';
+$args['footer_text'] = '<p>' . esc_html__( '' ) . '</p>';
 
 Redux::set_args( $opt_name, $args );
 
@@ -291,19 +291,19 @@ Redux::set_args( $opt_name, $args );
 $help_tabs = array(
 	array(
 		'id'      => 'redux-help-tab-1',
-		'title'   => esc_html__( 'Theme Information 1', 'your-textdomain-here' ),
-		'content' => '<p>' . esc_html__( 'This is the tab content, HTML is allowed.', 'your-textdomain-here' ) . '</p>',
+		'title'   => esc_html__( 'Theme Information 1', 'wpt1' ),
+		'content' => '<p>' . esc_html__( 'This is the tab content, HTML is allowed.', 'wpt1' ) . '</p>',
 	),
 	array(
 		'id'      => 'redux-help-tab-2',
-		'title'   => esc_html__( 'Theme Information 2', 'your-textdomain-here' ),
-		'content' => '<p>' . esc_html__( 'This is the tab content, HTML is allowed.', 'your-textdomain-here' ) . '</p>',
+		'title'   => esc_html__( 'Theme Information 2', 'wpt1' ),
+		'content' => '<p>' . esc_html__( 'This is the tab content, HTML is allowed.', 'wpt1' ) . '</p>',
 	),
 );
 Redux::set_help_tab( $opt_name, $help_tabs );
 
 // Set the help sidebar.
-$content = '<p>' . esc_html__( 'This is the sidebar content, HTML is allowed.', 'your-textdomain-here' ) . '</p>';
+$content = '<p>' . esc_html__( 'This is the sidebar content, HTML is allowed.', 'wpt1' ) . '</p>';
 
 Redux::set_help_sidebar( $opt_name, $content );
 
@@ -315,285 +315,25 @@ Redux::set_help_sidebar( $opt_name, $content );
  * ---> START SECTIONS
  */
 
-// -> START Basic Fields
-Redux::set_section(
-	$opt_name,
+// header logo
+Redux::set_section( $opt_name,
 	array(
-		'title'            => esc_html__( 'Basic Fields', 'your-textdomain-here' ),
-		'id'               => 'basic',
-		'desc'             => esc_html__( 'These are really basic fields!', 'your-textdomain-here' ),
+		'title'            => esc_html__( 'Header Fields', 'wpt1' ),
+		'id'               => 'header',
+		'desc'             => esc_html__( 'Header fields to upload logo and page title,', 'wpt1' ),
 		'customizer_width' => '400px',
-		'icon'             => 'el el-home',
+		'icon'             => 'el el-minus',
 	)
 );
+// logo and page title
+require_once Redux_Core::$dir . '../sample/sections/media-uploads/logo.php';
+require_once Redux_Core::$dir . '../sample/sections/media-uploads/fav.php';
+require_once Redux_Core::$dir . '../sample/sections/media-uploads/toptext.php';
 
-require_once Redux_Core::$dir . '../sample/sections/basic-fields/checkbox.php';
-require_once Redux_Core::$dir . '../sample/sections/basic-fields/radio.php';
-require_once Redux_Core::$dir . '../sample/sections/basic-fields/sortable.php';
-require_once Redux_Core::$dir . '../sample/sections/basic-fields/text.php';
-require_once Redux_Core::$dir . '../sample/sections/basic-fields/multi-text.php';
-require_once Redux_Core::$dir . '../sample/sections/basic-fields/password.php';
-require_once Redux_Core::$dir . '../sample/sections/basic-fields/textarea.php';
 
-// -> START Editors.
-Redux::set_section(
-	$opt_name,
-	array(
-		'title'            => esc_html__( 'Editors', 'your-textdomain-here' ),
-		'id'               => 'editor',
-		'customizer_width' => '500px',
-		'icon'             => 'el el-edit',
-	)
-);
-
-require_once Redux_Core::$dir . '../sample/sections/editors/wordpress-editor.php';
-require_once Redux_Core::$dir . '../sample/sections/editors/ace-editor.php';
-
-// -> START Color Selection.
-Redux::set_section(
-	$opt_name,
-	array(
-		'title' => esc_html__( 'Color Selection', 'your-textdomain-here' ),
-		'id'    => 'color',
-		'icon'  => 'el el-brush',
-	)
-);
-
-require_once Redux_Core::$dir . '../sample/sections/color-selection/color.php';
-require_once Redux_Core::$dir . '../sample/sections/color-selection/color-gradient.php';
-require_once Redux_Core::$dir . '../sample/sections/color-selection/color-rgba.php';
-require_once Redux_Core::$dir . '../sample/sections/color-selection/link-color.php';
-require_once Redux_Core::$dir . '../sample/sections/color-selection/palette.php';
-require_once Redux_Core::$dir . '../sample/sections/color-selection/color-palette.php';
-
-// -> START Design Fields.
-Redux::set_section(
-	$opt_name,
-	array(
-		'title' => esc_html__( 'Design Fields', 'your-textdomain-here' ),
-		'id'    => 'design',
-		'icon'  => 'el el-wrench',
-	)
-);
-
-require_once Redux_Core::$dir . '../sample/sections/design-fields/background.php';
-require_once Redux_Core::$dir . '../sample/sections/design-fields/box-shadow.php';
-require_once Redux_Core::$dir . '../sample/sections/design-fields/border.php';
-require_once Redux_Core::$dir . '../sample/sections/design-fields/dimensions.php';
-require_once Redux_Core::$dir . '../sample/sections/design-fields/spacing.php';
-
-// -> START Media Uploads.
-Redux::set_section(
-	$opt_name,
-	array(
-		'title' => esc_html__( 'Media Uploads', 'your-textdomain-here' ),
-		'id'    => 'media',
-		'icon'  => 'el el-picture',
-	)
-);
-
-require_once Redux_Core::$dir . '../sample/sections/media-uploads/gallery.php';
-require_once Redux_Core::$dir . '../sample/sections/media-uploads/media.php';
-require_once Redux_Core::$dir . '../sample/sections/media-uploads/multi-media.php';
-require_once Redux_Core::$dir . '../sample/sections/media-uploads/slides.php';
-
-// -> START Presentation Fields.
-Redux::set_section(
-	$opt_name,
-	array(
-		'title' => esc_html__( 'Presentation Fields', 'your-textdomain-here' ),
-		'id'    => 'presentation',
-		'icon'  => 'el el-screen',
-	)
-);
-
-require_once Redux_Core::$dir . '../sample/sections/presentation-fields/divide.php';
-require_once Redux_Core::$dir . '../sample/sections/presentation-fields/content.php';
-require_once Redux_Core::$dir . '../sample/sections/presentation-fields/info.php';
-require_once Redux_Core::$dir . '../sample/sections/presentation-fields/section.php';
-
-Redux::set_section(
-	$opt_name,
-	array(
-		'id'   => 'presentation-divide-sample',
-		'type' => 'divide',
-	)
-);
-
-// → START Switch & Button Set.
-Redux::set_section(
-	$opt_name,
-	array(
-		'title' => esc_html__( 'Switch / Button Set', 'your-textdomain-here' ),
-		'id'    => 'switch_buttonset',
-		'icon'  => 'el el-cogs',
-	)
-);
-
-require_once Redux_Core::$dir . '../sample/sections/switch-button/button-set.php';
-require_once Redux_Core::$dir . '../sample/sections/switch-button/switch.php';
-
-// -> START Select Fields.
-Redux::set_section(
-	$opt_name,
-	array(
-		'title' => esc_html__( 'Select Fields', 'your-textdomain-here' ),
-		'id'    => 'select',
-		'icon'  => 'el el-list-alt',
-	)
-);
-
-require_once Redux_Core::$dir . '../sample/sections/select-fields/select.php';
-require_once Redux_Core::$dir . '../sample/sections/select-fields/image-select.php';
-require_once Redux_Core::$dir . '../sample/sections/select-fields/select-image.php';
-
-// -> START Slider / Spinner.
-Redux::set_section(
-	$opt_name,
-	array(
-		'title' => esc_html__( 'Slider / Spinner', 'your-textdomain-here' ),
-		'id'    => 'slider_spinner',
-		'icon'  => 'el el-adjust-alt',
-	)
-);
-
-require_once Redux_Core::$dir . '../sample/sections/slider-spinner/slider.php';
-require_once Redux_Core::$dir . '../sample/sections/slider-spinner/spinner.php';
-
-// -> START Typography.
-require_once Redux_Core::$dir . '../sample/sections/typography/typography.php';
-
-// -> START Additional Types.
-Redux::set_section(
-	$opt_name,
-	array(
-		'title' => esc_html__( 'Additional Types', 'your-textdomain-here' ),
-		'id'    => 'additional',
-		'icon'  => 'el el-magic',
-	)
-);
-
-require_once Redux_Core::$dir . '../sample/sections/additional-types/date.php';
-require_once Redux_Core::$dir . '../sample/sections/additional-types/date-time-picker.php';
-require_once Redux_Core::$dir . '../sample/sections/additional-types/sorter.php';
-require_once Redux_Core::$dir . '../sample/sections/additional-types/raw.php';
-
-Redux::set_section(
-	$opt_name,
-	array(
-		'title' => esc_html__( 'Advanced Features', 'your-textdomain-here' ),
-		'icon'  => 'el el-thumbs-up',
-	)
-);
-
-require_once Redux_Core::$dir . '../sample/sections/advanced-features/callback.php';
-
-// -> START Validation.
-require_once Redux_Core::$dir . '../sample/sections/advanced-features/field-validation.php';
-
-// -> START Sanitizing.
-require_once Redux_Core::$dir . '../sample/sections/advanced-features/field-sanitizing.php';
-
-// -> START Required.
-require_once Redux_Core::$dir . '../sample/sections/advanced-features/field-required-linking.php';
-
-require_once Redux_Core::$dir . '../sample/sections/advanced-features/wpml-integration.php';
-
-// -> START Disabling.
-Redux::set_section(
-	$opt_name,
-	array(
-		'title' => esc_html__( 'Disabling', 'your-textdomain-here' ),
-		'icon'  => 'el el-lock',
-	)
-);
-
-require_once Redux_Core::$dir . '../sample/sections/disabling/disable-field.php';
-require_once Redux_Core::$dir . '../sample/sections/disabling/disable-section.php';
-
-// -> START Extensions.
-Redux::set_section(
-	$opt_name,
-	array(
-		'title' => esc_html__( 'Redux Extensions', 'your-textdomain-here' ),
-		'id'    => 'redux-extensions',
-		'icon'  => 'el el-redux',
-		'class' => 'pro_highlight',
-		'desc'  => esc_html__( 'For full documentation on this field, visit: ', 'your-textdomain-here' ) . '<a href="https://devs.redux.io/core-extensions/" target="_blank">https://devs.redux.io/core-extensions/</a>',
-	)
-);
-
-require_once Redux_Core::$dir . '../sample/sections/extensions/accordion.php';
-require_once Redux_Core::$dir . '../sample/sections/extensions/color-scheme.php';
-require_once Redux_Core::$dir . '../sample/sections/extensions/custom-fonts.php';
-require_once Redux_Core::$dir . '../sample/sections/extensions/google-maps.php';
-require_once Redux_Core::$dir . '../sample/sections/extensions/icon-select.php';
-require_once Redux_Core::$dir . '../sample/sections/extensions/js-button.php';
-require_once Redux_Core::$dir . '../sample/sections/extensions/repeater.php';
-require_once Redux_Core::$dir . '../sample/sections/extensions/shortcodes.php';
-require_once Redux_Core::$dir . '../sample/sections/extensions/social-profiles.php';
-require_once Redux_Core::$dir . '../sample/sections/extensions/tabbed.php';
-require_once Redux_Core::$dir . '../sample/sections/extensions/widget-areas.php';
-require_once Redux_Core::$dir . '../sample/sections/extensions/taxonomy.php';
-require_once Redux_Core::$dir . '../sample/sections/extensions/users.php';
-
-/**
- * Metaboxes
- */
-require_once Redux_Core::$dir . '../sample/metaboxes.php';
-
-/**
- * Raw README
- */
-if ( file_exists( $dir . '/../README.md' ) ) {
-	$section = array(
-		'icon'   => 'el el-list-alt',
-		'title'  => esc_html__( 'Documentation', 'your-textdomain-here' ),
-		'fields' => array(
-			array(
-				'id'           => 'opt-raw-documentation',
-				'type'         => 'raw',
-				'markdown'     => true,
-				'content_path' => __DIR__ . '/../README.md', // FULL PATH, not relative, please.
-			),
-		),
-	);
-
-	Redux::set_section( $opt_name, $section );
-}
-
-Redux::set_section(
-	$opt_name,
-	array(
-		'icon'            => 'el el-list-alt',
-		'title'           => esc_html__( 'Customizer Only', 'your-textdomain-here' ),
-		'desc'            => '<p class="description">' . esc_html__( 'This Section should be visible only in Customizer', 'your-textdomain-here' ) . '</p>',
-		'customizer_only' => true,
-		'fields'          => array(
-			array(
-				'id'              => 'opt-customizer-only',
-				'type'            => 'select',
-				'title'           => esc_html__( 'Customizer Only Option', 'your-textdomain-here' ),
-				'subtitle'        => esc_html__( 'The subtitle is NOT visible in customizer', 'your-textdomain-here' ),
-				'desc'            => esc_html__( 'The field desc is NOT visible in customizer.', 'your-textdomain-here' ),
-				'customizer_only' => true,
-				'options'         => array(
-					'1' => esc_html__( 'Opt 1', 'your-textdomain-here' ),
-					'2' => esc_html__( 'Opt 2', 'your-textdomain-here' ),
-					'3' => esc_html__( 'Opt 3', 'your-textdomain-here' ),
-				),
-				'default'         => '2',
-			),
-		),
-	)
-);
 
 /*
  * <--- END SECTIONS
- */
-
-/*
- * YOU MUST PREFIX THE FUNCTIONS BELOW AND ACTION FUNCTION CALLS OR OTHER CONFIGS MAY OVERRIDE YOUR CODE.
  */
 
 /*
@@ -690,8 +430,8 @@ if ( ! function_exists( 'dynamic_section' ) ) {
 	 */
 	function dynamic_section( array $sections ): array {
 		$sections[] = array(
-			'title'  => esc_html__( 'Section via hook', 'your-textdomain-here' ),
-			'desc'   => '<p class="description">' . esc_html__( 'This is a section created by adding a filter to the sections array. Can be used by child themes to add/remove sections from the options.', 'your-textdomain-here' ) . '</p>',
+			'title'  => esc_html__( 'Section via hook', 'wpt1' ),
+			'desc'   => '<p class="description">' . esc_html__( 'This is a section created by adding a filter to the sections array. Can be used by child themes to add/remove sections from the options.', 'wpt1' ) . '</p>',
 			'icon'   => 'el el-paper-clip',
 
 			// Leave this as a blank section, no options just some intro text set above.
@@ -728,7 +468,7 @@ if ( ! function_exists( 'change_defaults' ) ) {
 	 * @return array
 	 */
 	function change_defaults( array $defaults ): array {
-		$defaults['str_replace'] = esc_html__( 'Testing filter hook!', 'your-textdomain-here' );
+		$defaults['str_replace'] = esc_html__( 'Testing filter hook!', 'wpt1' );
 
 		return $defaults;
 	}
