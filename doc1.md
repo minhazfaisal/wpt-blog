@@ -785,3 +785,5 @@ Note - too many files, thats why only sample-config.php is uploaded to git
 
 **Download** 
 - https://github.com/reduxframework/redux-framework
+
+>Note : because of the redux option tree, a lot of css will be inherited by default, that’s why the website's style will be hampered. 
