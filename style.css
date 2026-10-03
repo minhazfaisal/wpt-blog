@@ -65,6 +65,7 @@ Text Domain: wpt1
     color: #888888;
     font-size: 13px !important;
 }
+
 /* titlebar breadcrumbs */
 .breadcrumb {
     display: -ms-flexbox;
@@ -77,20 +78,21 @@ Text Domain: wpt1
     background-color: #fff;
     border-radius: .25rem;
 }
-
 .breadcrumb .active {
     color: #71CD14;
 }
-
 .breadcrumb li::after {
     content: " ";
     margin-right: 5px;
 }
-
 .breadcrumb .active:hover {
     color: #000000;
 }
-
 .breadcrumb .active::before {
     content: " / ";
+}
+/* header.php logo */
+.header_area .logo_h img {
+    width: 150px;
+    height: auto;
 }
