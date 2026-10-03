@@ -124,7 +124,7 @@ option_tree/sample/sample-config.php, sample/sections/media-uploads/logo.php, he
 </a>
 ```
 **Icon library**
-https://developer.wordpress.org/resource/dashicons/
-http://elusiveicons.com/icons/
+- https://developer.wordpress.org/resource/dashicons/
+- http://elusiveicons.com/icons/
 ---
 
