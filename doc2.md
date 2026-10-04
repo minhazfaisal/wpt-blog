@@ -127,4 +127,38 @@ option_tree/sample/sample-config.php, sample/sections/media-uploads/logo.php, he
 - https://developer.wordpress.org/resource/dashicons/
 - http://elusiveicons.com/icons/
 ---
+==Step 17: Option framework -home page hero==
+sample/sections/wpt/logo.php
+sample/sections/wpt/fav.php
+sample/sections/wpt/toptext.php
+sample/sample-config.php, home page(front-page.php), index.html
 
+Note - updating new file path to manage the editor files of redux framework easily(logo, fav, toptext)
+
+1. Creating option in sample-config.php for main home page - hero section(background image, text, button) 
+2. Creating front-page.php(default name) for main home page using template index.html in theme root directory
+3. Copy the index.html to front-page.php, edit header, footer, 
+4. Add a DocBlock code comment in front-page
+5. To set it as front page, pages -> add new -> page attribute -> front page template -> publish
+6. Settings -> reading -> homepage to home
+7. Pages -> add new -> blog, Settings -> reading -> posts page -> blog
+8. Menu -> adding pages to menu
+9. front-page.php -> connect image using get_template_directory_uri() and icons using classes to get a proper view. 
+
+**Template**
+https://developer.wordpress.org/themes/classic-themes/basics/template-hierarchy/
+
+**DocBlock**
+https://developer.wordpress.org/themes/classic-themes/templates/page-template-files/
+
+```php
+<?php
+/**
+* Template Name: Front Page
+*
+* @package WordPress
+* @subpackage Twenty_Fourteen
+* @since Twenty Fourteen 1.0
+*/
+```
+---
