@@ -131,7 +131,11 @@ option_tree/sample/sample-config.php, sample/sections/media-uploads/logo.php, he
 sample/sections/wpt/logo.php
 sample/sections/wpt/fav.php
 sample/sections/wpt/toptext.php
-sample/sample-config.php, home page(front-page.php), index.html
+
+sample/sample-config.php,
+sample/sections/wpt/hero_bg.php
+sample/sections/wpt/hero.php
+home page(front-page.php), index.html, style.css(template), style.css(theme)
 
 Note - updating new file path to manage the editor files of redux framework easily(logo, fav, toptext)
 
@@ -144,13 +148,15 @@ Note - updating new file path to manage the editor files of redux framework easi
 7. Pages -> add new -> blog, Settings -> reading -> posts page -> blog
 8. Menu -> adding pages to menu
 9. front-page.php -> connect image using get_template_directory_uri() and icons using classes to get a proper view. 
+10. To make hero background image dynamic -> remove style.css background image code and add to front-page.php inline css
+11. To make change of button color -> add color -> need to add hover css code to style.css(theme) also
+
 
 **Template**
 https://developer.wordpress.org/themes/classic-themes/basics/template-hierarchy/
 
 **DocBlock**
 https://developer.wordpress.org/themes/classic-themes/templates/page-template-files/
-
 ```php
 <?php
 /**
@@ -160,5 +166,13 @@ https://developer.wordpress.org/themes/classic-themes/templates/page-template-fi
 * @subpackage Twenty_Fourteen
 * @since Twenty Fourteen 1.0
 */
+```
+```html
+<section class="home_banner_area mb-40" style="background: url(<?php echo esc_url( $wpdev[ 'h_hero_bg_img' ]['url'] ); ?>) no-repeat center bottom; background-size: cover;">
+```
+```html
+<a class="main_btn mt-40" href="<?php echo esc_url( $wpdev[ 'h_btn_url' ] ); ?>" style="background-color: <?php echo esc_attr( $wpdev[ 'h_btn_color' ] ); ?>;">
+<?php echo esc_html( $wpdev[ 'h_btn_text' ] ); ?>
+</a>
 ```
 ---
