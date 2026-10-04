@@ -315,7 +315,7 @@ Redux::set_help_sidebar( $opt_name, $content );
  * ---> START SECTIONS
  */
 
-// header logo
+// header section
 Redux::set_section( $opt_name,
 	array(
 		'title'            => esc_html__( 'Header Fields', 'wpt1' ),
@@ -323,13 +323,27 @@ Redux::set_section( $opt_name,
 		'desc'             => esc_html__( 'Header fields to upload logo and page title,', 'wpt1' ),
 		'customizer_width' => '400px',
 		'icon'             => 'el el-minus',
-	)
-);
+));
 // logo and page title
-require_once Redux_Core::$dir . '../sample/sections/media-uploads/logo.php';
-require_once Redux_Core::$dir . '../sample/sections/media-uploads/fav.php';
-require_once Redux_Core::$dir . '../sample/sections/media-uploads/toptext.php';
+require_once Redux_Core::$dir . '../sample/sections/wpt/logo.php';
+// fav icon
+require_once Redux_Core::$dir . '../sample/sections/wpt/fav.php';
+// topbar
+require_once Redux_Core::$dir . '../sample/sections/wpt/toptext.php';
 
+// front-page hero section
+Redux::set_section( $opt_name,
+	array(
+		'title'            => esc_html__( 'Hero Fields', 'wpt1' ),
+		'id'               => 'hero',
+		'desc'             => esc_html__( 'Hero fields for the front page,', 'wpt1' ),
+		'customizer_width' => '400px',
+		'icon'             => 'el el-picture',
+));
+// hero content
+require_once Redux_Core::$dir . '../sample/sections/wpt/hero.php';
+// hero background image
+require_once Redux_Core::$dir . '../sample/sections/wpt/hero_bg.php';
 
 
 /*
