@@ -96,3 +96,7 @@ Text Domain: wpt1
     width: 150px;
     height: auto;
 }
+/* hero */
+.main_btn:hover{
+    background-color: transparent !important;
+}
