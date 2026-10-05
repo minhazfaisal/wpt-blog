@@ -322,7 +322,7 @@ Redux::set_section( $opt_name,
 		'id'               => 'header',
 		'desc'             => esc_html__( 'Header fields to upload logo and page title,', 'wpt1' ),
 		'customizer_width' => '400px',
-		'icon'             => 'el el-minus',
+		'icon'             => 'el el-arrow-up',
 ));
 // logo and page title
 require_once Redux_Core::$dir . '../sample/sections/wpt/logo.php';
@@ -344,6 +344,21 @@ Redux::set_section( $opt_name,
 require_once Redux_Core::$dir . '../sample/sections/wpt/hero.php';
 // hero background image
 require_once Redux_Core::$dir . '../sample/sections/wpt/hero_bg.php';
+
+// footer bottom copyright section
+Redux::set_section( $opt_name,
+	array(
+		'title'            => esc_html__( 'Footer Bottom', 'wpt1' ),
+		'id'               => 'b_footer',
+		'desc'             => esc_html__( 'Footer copyright and social media fields.', 'wpt1' ),
+		'customizer_width' => '400px',
+		'icon'             => 'el el-arrow-down',
+));
+// enable bottom footer checkbox
+require_once Redux_Core::$dir . '../sample/sections/wpt/check.php';
+// footer copyright text
+require_once Redux_Core::$dir . '../sample/sections/wpt/editor.php';
+
 
 
 /*
