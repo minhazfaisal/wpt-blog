@@ -176,3 +176,19 @@ https://developer.wordpress.org/themes/classic-themes/templates/page-template-fi
 </a>
 ```
 ---
+==Step 18: Option framework - home feature, promo banner section, footer bottom==
+sample-config.php, front-page.php, footer.php, check.php, editor.php
+
+1. Creating featured items using theme option or custom post
+2. Promo banner like hero section using theme option
+3. Footer bottom -> adding code to sample-config.php, adding checkbox to enable or disable the footer bottom. For copyright taking an editor, for social media taking text for icon and url
+4. Calling to footer.php
+```php
+<?php
+$edfb = $wpdev['ed_check'];
+if($edfb == 1){ 
+?>
+Footer bottom
+<?php } ?>
+```
+---
