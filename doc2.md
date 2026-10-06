@@ -188,7 +188,7 @@ sample-config.php, front-page.php, footer.php, check.php, editor.php
 $edfb = $wpdev['ed_check'];
 if($edfb == 1){ 
 ?>
-Footer bottom
+//Footer bottom
 <?php } ?>
 ```
 ---
