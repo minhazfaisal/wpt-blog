@@ -192,3 +192,63 @@ Footer bottom
 <?php } ?>
 ```
 ---
+==Step 19: Creating pages - Contact us, about us, etc==
+page.php, page-sidebar.php
+
+1. Pages -> add new -> contact us -> publish
+2. Adding contact page to menu
+3. By visiting the Contact us page we will see a default incomplete template
+4. Need to make page template blank
+5. Creating page.php - copy the page template from index.php -> paste and modify to page.php
+6. Adding content, contact form using shortcode to contact us page
+7. We will create another layout 8/4 for about just for testing
+8. page-sidebar.php 8/4 column layout with sidebar. Same as before.
+
+**page.php**
+The page.php file serves as the default template for rendering static pages. When a visitor views a page on a WordPress site—such as an "About Us," "Contact," or "Services" page—WordPress automatically looks for this file to dictate how the layout and content are displayed.
+https://developer.wordpress.org/themes/classic-themes/templates/page-template-files/
+https://wpmudev.com/blog/the-ultimate-guide-to-wordpress-page-templates/
+```php
+<?php 
+get_header(); // Pulls in the header.php file
+
+if ( have_posts() ) : 
+    	while ( have_posts() ) : the_post(); 
+?>
+        
+        <h1><?php the_title(); // Displays page title ?></h1>
+        <div class="page-content">
+            <?php the_content(); // Displays main text/media ?>
+        </div>
+
+<?php 
+endwhile; 
+else:
+echo: “no content here”;
+endif; 
+
+get_sidebar(); // Optional: Pulls in sidebar.php
+get_footer(); // Pulls in the footer.php file
+?>
+```
+or
+```php
+<?php
+              if ( have_posts() ) :
+                while ( have_posts() ) : the_post();
+                  if ( trim( get_the_content() ) !== '' ) :
+                    the_content();
+                  else :
+                    echo esc_html__( 'No content here', 'wpt1' );
+                  endif;
+                endwhile;
+              else :
+                echo esc_html__( 'Page not found', 'wpt1' );
+              endif;
+?>
+```
+Note - page title and breadcrumb displayed differently here. (Code modified, easy one)
+*Pages and single posts: use the_title() inside the WordPress Loop so it refers to the current page or post.
+*Archives: use the_archive_title() instead; there may not be one current post title to display.
+*Breadcrumbs: mj_wp_breadcrumb() is designed to work across pages, posts, and archives. It’s defined in breadcrumb.php.
+---
