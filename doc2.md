@@ -206,8 +206,8 @@ page.php, page-sidebar.php
 
 **page.php**
 The page.php file serves as the default template for rendering static pages. When a visitor views a page on a WordPress site—such as an "About Us," "Contact," or "Services" page—WordPress automatically looks for this file to dictate how the layout and content are displayed.
-https://developer.wordpress.org/themes/classic-themes/templates/page-template-files/
-https://wpmudev.com/blog/the-ultimate-guide-to-wordpress-page-templates/
+- https://developer.wordpress.org/themes/classic-themes/templates/page-template-files/
+- https://wpmudev.com/blog/the-ultimate-guide-to-wordpress-page-templates/
 ```php
 <?php 
 get_header(); // Pulls in the header.php file
