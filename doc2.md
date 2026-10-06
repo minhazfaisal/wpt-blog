@@ -253,4 +253,5 @@ Note - page title and breadcrumb displayed differently here. (Code modified, eas
 *Breadcrumbs: mj_wp_breadcrumb() is designed to work across pages, posts, and archives. It’s defined in breadcrumb.php.
 
 Note - there is a problem in the blogs menu. After adding the category blogs menu does not work. Need to check the code again.
+
 ---
