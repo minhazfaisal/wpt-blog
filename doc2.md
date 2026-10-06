@@ -251,4 +251,6 @@ Note - page title and breadcrumb displayed differently here. (Code modified, eas
 *Pages and single posts: use the_title() inside the WordPress Loop so it refers to the current page or post.
 *Archives: use the_archive_title() instead; there may not be one current post title to display.
 *Breadcrumbs: mj_wp_breadcrumb() is designed to work across pages, posts, and archives. It’s defined in breadcrumb.php.
+
+Note - there is a problem in the blogs menu. After adding the category blogs menu does not work. Need to check the code again.
 ---
