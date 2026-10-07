@@ -255,3 +255,11 @@ Note - page title and breadcrumb displayed differently here. (Code modified, eas
 Note - there is a problem in the blogs menu. After adding the category blogs menu does not work. Need to check the code again.
 
 ---
+
+==Step 20: Creating pages - 404==
+404.php
+
+1. Create 404.php, copy paste page.php
+2. Create page layout
+
+---
